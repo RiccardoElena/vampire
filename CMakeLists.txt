@@ -781,6 +781,9 @@ set(VAMPIRE_SOURCES
     "${CMAKE_CURRENT_BINARY_DIR}/version.cpp"
     FlutedFragment/Classifier.hpp
     FlutedFragment/Classifier.cpp
+    FlutedFragment/Separator.hpp
+    Inferences/FlutedResolution.hpp
+    Inferences/FlutedResolution.cpp
     )
 
 ################################################################

@@ -396,8 +396,10 @@ public:
     TCLAUSIFY,
     TPREPROCESS,
     VAMPIRE,
-    /** this mode classify and  resolve problem in the FlutedFragment*/
-    FLUTED
+    /** this mode resolve problem in the FlutedFragment*/
+    FLUTED,
+    /** this mode check if a given problem is in the Fluted Fragment */
+    CLASSIFY,
   };
 
   enum class Schedule : unsigned int {
@@ -2126,7 +2128,7 @@ public:
 
   // IMPORTANT, if you add a showX command then include showAll
   bool showAll() const { return _showAll.actualValue; }
-  bool showFluted() const { return _showFluted.actualValue; }
+  bool showFluted() const { return showAll() || _showFluted.actualValue; }
   bool showActive() const { return showAll() || _showActive.actualValue; }
   bool showBlocked() const { return showAll() || _showBlocked.actualValue; }
   bool showDefinitions() const { return showAll() || _showDefinitions.actualValue; }

@@ -78,7 +78,7 @@ protected:
     // Operators
     inline bool operator==(const EVar &rhs) const
     {
-      return _isSet && rhs._isSet && _hasZeroVars == rhs._hasZeroVars && (!_hasZeroVars || _var == rhs._var);
+      return _isSet && rhs._isSet && _hasZeroVars == rhs._hasZeroVars && (_hasZeroVars || _var == rhs._var);
     }
 
     inline bool operator==(const unsigned var) const { return _isSet && !_hasZeroVars && _var == var; }
@@ -340,6 +340,8 @@ protected:
     bool _isValid{true};
   };
 
+  friend class Separator;
+
   // Core Methods
   bool isFluted(Clause *clause);
   bool isFluted(Literal *literal, FlutedSequence &flutedSequence);
@@ -347,6 +349,7 @@ protected:
   bool isFL1Clause(Clause *clause);
   bool isFL2Clause(Clause *clause);
   bool isFL3Clause(Clause *clause);
+  bool UpdateRightMostVars(EVar &rightMostVar1, EVar &rightMostVar2, unsigned int lastVar);
 };
 } // namespace FlutedFragment
 

@@ -177,7 +177,6 @@ bool ClauseClassifier::isFluted(Literal *literal, FlutedSequence &fl)
   return true;
 }
 
-// TODO: allign this with the other isFL methods using variables native qqorder
 bool ClauseClassifier::isFL2Clause(Clause *clause)
 {
   if (_debug) {
@@ -186,7 +185,7 @@ bool ClauseClassifier::isFL2Clause(Clause *clause)
 
   auto lit{clause->getLiteralIterator()};
   Literal *currentLit;
-  // TODO: Enum should be better
+
   FlutedSequence localFl{};
 
   while (lit.hasNext()) {
@@ -217,7 +216,7 @@ bool ClauseClassifier::isFL2Clause(Clause *clause)
 
       FlutedSequence innerFl{isFluted(currentLit, v)};
 
-      if (!innerFl.isValid() || (localFl.isVarSet() && (innerFl.isVarConst() != localFl.isVarConst() || (!innerFl.isVarConst() && innerFl.var() != localFl.var())))) {
+      if (!innerFl.isComplete() || !innerFl.isValid() || (localFl.isVarSet() && (innerFl.isVarConst() != localFl.isVarConst() || (!innerFl.isVarConst() && innerFl.var() != localFl.var())))) {
         return false;
       }
 
@@ -370,9 +369,6 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
         }
       }
     }
-    if (!localFl.isComplete()) {
-      return false;
-    }
 
     args = args->next();
   }
@@ -396,9 +392,9 @@ bool ClauseClassifier::isFL3Clause(Clause *clause)
   auto lit{clause->getLiteralIterator()};
   Literal *currentLit{nullptr};
   unsigned lastVar{0}, var{0};
-  bool hasFirstVar{false};
-  // TODO: Enum should be better
-  // this variable correspond to the cases listed above
+  // bool hasFirstVar{false};
+  //  TODO: Enum should be better
+  //  this variable correspond to the cases listed above
   EVar rightMostVar1{}, rightMostVar2{};
 
   while (lit.hasNext()) {
@@ -431,7 +427,7 @@ bool ClauseClassifier::isFL3Clause(Clause *clause)
       continue;
     }
 
-    hasFirstVar = !(lastVar = litVars.next().var());
+    lastVar = litVars.next().var();
     if (_debug) {
       cout << "First var is " << lastVar << endl;
     }
@@ -448,44 +444,84 @@ bool ClauseClassifier::isFL3Clause(Clause *clause)
       }
     }
 
-    if (_debug) {
-      cout << "Rightmost1: " << rightMostVar1.var() << " LastVar: " << lastVar << " Rightmost2: " << rightMostVar2.var() << endl;
-    }
-    if (!hasFirstVar) {
-      if (rightMostVar1.isSet() && rightMostVar1 != lastVar - 1) {
-        return false;
-      }
-
-      if (rightMostVar2.isSet() && rightMostVar2 != lastVar) {
-        return false;
-      }
-
-      if (!rightMostVar2.isSet()) {
-        rightMostVar2 = lastVar;
-      }
-    }
-    else {
-      if (rightMostVar1.isSet() && rightMostVar1 != lastVar && rightMostVar2.isSet() && rightMostVar2 != lastVar) {
-        return false;
-      }
-      if ((rightMostVar1.isSet() && rightMostVar1 != lastVar && rightMostVar1 != lastVar - 1) ||
-          (rightMostVar2.isSet() && rightMostVar2 != lastVar && rightMostVar2 != lastVar + 1)) {
-        return false;
-      }
-
-      if (!rightMostVar1.isSet()) {
-        rightMostVar1 = lastVar;
-      }
-      else if (!rightMostVar2.isSet()) {
-        rightMostVar2 = lastVar;
-      }
-    }
-
-    if (_debug) {
-      cout << "Rightmost1: " << rightMostVar1.var() << " LastVar: " << lastVar << " Rightmost2: " << rightMostVar2.var() << endl;
+    if (!UpdateRightMostVars(rightMostVar1, rightMostVar2, lastVar)) {
+      return false;
     }
   }
 
+  return true;
+}
+
+/*
+  This Method update the boundries.
+    - If none is set the first one is set with last var
+    - If only one is set (only the first one can be) it checks validity and update properly
+      - If "distance" between lastVar and first boundry is grater than 1 they're too far
+      - If "distance" is 0 lastVar is coherent and can be ignored
+      - If "distance" is 1 then:
+        - if lastVar is grater than first boundry it suffices to update the second
+        - else the first boundry was improperly set, so its value has to be shifted to the second boundry and
+          it has to be set to lastVar.
+    - if both are set it checks validity
+  If a violation is found the method return false;
+*/
+bool ClauseClassifier::UpdateRightMostVars(EVar &rightMostVar1, EVar &rightMostVar2, unsigned int lastVar)
+{
+  if (rightMostVar1.isSet() && rightMostVar2.isSet()) {
+    if (_debug) {
+      cout << "Rightmost1: " << rightMostVar1.var() << " LastVar: " << lastVar << " Rightmost2: " << rightMostVar2.var() << endl;
+    }
+    if (rightMostVar2.var() != lastVar && rightMostVar1.var() != lastVar) {
+      if (_debug) {
+        cout << "LastVar is neither Xm nor Xm+1" << endl;
+      }
+      return false;
+    }
+  }
+  else if (rightMostVar1.isSet()) {
+    if (_debug) {
+      cout << "Rightmost1: " << rightMostVar1.var() << " LastVar: " << lastVar << " Rightmost2: UNKNOWN" << endl;
+    }
+    switch (static_cast<int>(rightMostVar1.var()) - static_cast<int>(lastVar)) {
+      case 1: {
+        rightMostVar2.setVar(rightMostVar1.var());
+        rightMostVar1.setVar(lastVar);
+        if (_debug) {
+          cout << "Rightmost1: " << rightMostVar1.var() << " Rightmost2: " << rightMostVar2.var() << endl;
+        }
+        break;
+      }
+      case -1: {
+        rightMostVar2.setVar(lastVar);
+        if (_debug) {
+          cout << "Rightmost1: " << rightMostVar1.var() << " Rightmost2: " << rightMostVar2.var() << endl;
+        }
+        break;
+      }
+      case 0: {
+        if (_debug) {
+          cout << "LastVar = Rightmost1, no need for update" << endl;
+          cout << "Rightmost1: " << rightMostVar1.var() << " Rightmost2: UNKNOWN" << endl;
+        }
+        break;
+      }
+      default: {
+        if (_debug) {
+          cout << "Rightmost1 and LastVar are too distant from eachother to be admissible" << endl;
+        }
+        return false;
+      }
+    }
+  }
+  else {
+    if (_debug) {
+      cout << "Rightmost1: UNKNOWN LastVar: " << lastVar << " Rightmost2: UNKNOWN" << endl;
+    }
+    rightMostVar1.setVar(lastVar);
+    if (_debug) {
+      cout << "Rightmost1: " << rightMostVar1.var() << " LastVar: " << lastVar << " Rightmost2: UNKNOWN" << endl;
+    }
+  }
   return true;
 }
 

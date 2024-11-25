@@ -50,7 +50,7 @@ enum class UnitInputType : unsigned char {
 
 inline std::underlying_type<UnitInputType>::type toNumber(UnitInputType t) { return static_cast<std::underlying_type<UnitInputType>::type>(t); }
 
-UnitInputType getInputType(UnitList* units);
+UnitInputType getInputType(UnitList *units);
 UnitInputType getInputType(UnitInputType t1, UnitInputType t2);
 
 /** Step-by-step guide to adding an inference to Vampire:
@@ -60,13 +60,13 @@ UnitInputType getInputType(UnitInputType t1, UnitInputType t2);
  *  2) Update the ruleName(..) function in Inference.cpp to return
  *     the name of the new inference. This name will be used in proof
  *     printing.
- *  3) In the /Inferences directory, create a *.cpp and *.hpp files to 
+ *  3) In the /Inferences directory, create a *.cpp and *.hpp files to
  *     contain the code which defines the functionality of the new inference.
  *  4) Vampire supports five types of inferences. Immediate simplifications,
  *     simplifications (like immediate simplifications, but occur later in the
  *     given clause loop), forward simplification, backward simplifications
  *     and generating inferences. The core functionality of each of these
- *     is specified via five abstract classes in InferenceEngine.hpp. The new 
+ *     is specified via five abstract classes in InferenceEngine.hpp. The new
  *     inference should inherit from one of these.
  *  5) In SaturationAlgorithm.hpp update the createFromOptions() function
  *     to attach the new inference to the relevant (generating, simplifying, ...)
@@ -78,10 +78,10 @@ UnitInputType getInputType(UnitInputType t1, UnitInputType t2);
  *          create a new index for this inference. Specify how the index will
  *          handle new clauses (will it index subterms of the clause, literals or
  *          something else? How will it handle these?).
- *     6.2) Update IndexManager.cpp create(...) function to return an 
+ *     6.2) Update IndexManager.cpp create(...) function to return an
  *          instance of the new index on request.
- *     6.3) Update inference code to override the attach(...) and detach(...) 
- *          methods of the InferenceEngine class. Request the index in the 
+ *     6.3) Update inference code to override the attach(...) and detach(...)
+ *          methods of the InferenceEngine class. Request the index in the
  *          attach(...) function and release in the detach(...) function.
  *
  *  Further notes on creating inferences:
@@ -93,7 +93,7 @@ UnitInputType getInputType(UnitInputType t1, UnitInputType t2);
  *    iterators available.
  *  - TermSubstitutionTrees, do NOT carry out any type checking. Thus, in the case
  *    where either the search or query term is a variable, a type check needs to
- *    be carried out by the inference code. This check may be a unification check or 
+ *    be carried out by the inference code. This check may be a unification check or
  *    a matching check depending on whether the inference is using unification or
  *    matching. Please view Superposition.cpp for an example of a unification check
  *    and ForwardDemodulation for an example of a matching check.
@@ -119,36 +119,36 @@ enum class InferenceRule : unsigned char {
   ANSWER_LITERAL_INPUT_SKOLEMISATION,
   /** claim definition, definition introduced by a claim in the input */
   CLAIM_DEFINITION,
-//     /** choice_axiom (Ax)((Ey)F(x,y) -> F(x,f(x))) */
-//     CHOICE_AXIOM,
-//     /** (Ax)(F(x)->F'(x)), G[F(t)] / G[F'(t)] */
-//     MONOTONE_REPLACEMENT,
-//     /** G[(Ax)F(x)] => G[F(t)] */
-//     FORALL_ELIMINATION,
+  //     /** choice_axiom (Ax)((Ey)F(x,y) -> F(x,f(x))) */
+  //     CHOICE_AXIOM,
+  //     /** (Ax)(F(x)->F'(x)), G[F(t)] / G[F'(t)] */
+  //     MONOTONE_REPLACEMENT,
+  //     /** G[(Ax)F(x)] => G[F(t)] */
+  //     FORALL_ELIMINATION,
   /** rectify a formula */
   RECTIFY,
-//     /** ~(F1 & ... & Fn) => ~F1 \/ ... \/ ~Fn */
-//     NOT_AND,
-//     /** ~(F1 \/ ... \/ Fn) => ~F1 & ... & ~Fn */
-//     NOT_OR,
-//     /** ~(F1 -> F2) => F1 & ~F2 */
-//     NOT_IMP,
-//     /** ~(F1 <-> F2) => F1 <~> F2 */
-//     NOT_IFF,
-//     /** ~(F1 <~> F2) => F1 <-> F2 */
-//     NOT_XOR = 1,
-//     /** ~~F => F */
-//     NOT_NOT = 1,
-//     /** ~(Ax)F => (Ex)~F */
-//     NOT_FORALL,
-//     /** ~(Ex)F => (Ax)~F */
-//     NOT_EXISTS,
-//     /** F1 -> F2 => ~F1 \/ F2 */
-//     IMP_TO_OR,
-//     /** F1 <-> F2 => (F1 -> F2) & (F2 -> F1) */
-//     IFF_TO_AND,
-//     /** F1 <~> F2 => (F1 \/ F2) & (~F1 \/ ~F2) */
-//     XOR_TO_AND,
+  //     /** ~(F1 & ... & Fn) => ~F1 \/ ... \/ ~Fn */
+  //     NOT_AND,
+  //     /** ~(F1 \/ ... \/ Fn) => ~F1 & ... & ~Fn */
+  //     NOT_OR,
+  //     /** ~(F1 -> F2) => F1 & ~F2 */
+  //     NOT_IMP,
+  //     /** ~(F1 <-> F2) => F1 <~> F2 */
+  //     NOT_IFF,
+  //     /** ~(F1 <~> F2) => F1 <-> F2 */
+  //     NOT_XOR = 1,
+  //     /** ~~F => F */
+  //     NOT_NOT = 1,
+  //     /** ~(Ax)F => (Ex)~F */
+  //     NOT_FORALL,
+  //     /** ~(Ex)F => (Ax)~F */
+  //     NOT_EXISTS,
+  //     /** F1 -> F2 => ~F1 \/ F2 */
+  //     IMP_TO_OR,
+  //     /** F1 <-> F2 => (F1 -> F2) & (F2 -> F1) */
+  //     IFF_TO_AND,
+  //     /** F1 <~> F2 => (F1 \/ F2) & (~F1 \/ ~F2) */
+  //     XOR_TO_AND,
   /** replace formula F by (A x1...xn)F, where x1 ... xn are all
    *  free variables of F */
   CLOSURE,
@@ -164,35 +164,35 @@ enum class InferenceRule : unsigned char {
 
   /** any kind of definition folding */
   DEFINITION_FOLDING,
-//     /** Replace formula (Q x1 ... xk ... x_n)A by
-//      * (Q x1 ... xk-1 xk+1 ... x_n)A, where xk does not occur in A */
-//     DUMMY_QUANTIFIER_REMOVAL,
-//     /** Transformation (A x1 ... xn)(F1 & ... & Fm) ->
-//      * (A x1 ... xn)F1 & ... & (A x1 ... xn)Fm) */
-//     FORALL_AND,
-//     /** Transformation (E x1 ... xn)(F1 \/ ... \/ Fm) ->
-//      * (E x1 ... xn)F1 \/ ... \/ (E x1 ... xn)Fm) */
-//     EXISTS_OR,
-//     /** (Q x)(Q y)F -> (Q y)(Q x)F */
-//     QUANTIFIER_SWAP,
-//     /** Transformation (A x1 x2)(F1 \/ F2) ->
-//      * (A x1)F1 \/ ... \/ (A x2)F2), where x2 does not occur in F1.
-//      * Can be applied to many variables and disjunctions of arbitrary length */
-//     FORALL_OR,
-//     /** Transformation (E x1 x2)(F1 & F2) ->
-//      * (E x1)F1 & ... & (E x2)F2), where x2 does not occur in F1.
-//      * Can be applied to many variables and disjunctions of arbitrary length */
-//     EXISTS_AND,
-//     /** obtained by permutations, e.g. f <=> g replaced by g <=> f */
-//     PERMUT,
-//     /** obtained by reordering equalities */
-//     REORDER_EQ,
-//     /** obtained by rewriting a positive equivalence
-//      * f <=> ginto an implication f => g or g => f
-//      */
-//     HALF_EQUIV,
-//     /** miniscoping */
-//     MINISCOPE,
+  //     /** Replace formula (Q x1 ... xk ... x_n)A by
+  //      * (Q x1 ... xk-1 xk+1 ... x_n)A, where xk does not occur in A */
+  //     DUMMY_QUANTIFIER_REMOVAL,
+  //     /** Transformation (A x1 ... xn)(F1 & ... & Fm) ->
+  //      * (A x1 ... xn)F1 & ... & (A x1 ... xn)Fm) */
+  //     FORALL_AND,
+  //     /** Transformation (E x1 ... xn)(F1 \/ ... \/ Fm) ->
+  //      * (E x1 ... xn)F1 \/ ... \/ (E x1 ... xn)Fm) */
+  //     EXISTS_OR,
+  //     /** (Q x)(Q y)F -> (Q y)(Q x)F */
+  //     QUANTIFIER_SWAP,
+  //     /** Transformation (A x1 x2)(F1 \/ F2) ->
+  //      * (A x1)F1 \/ ... \/ (A x2)F2), where x2 does not occur in F1.
+  //      * Can be applied to many variables and disjunctions of arbitrary length */
+  //     FORALL_OR,
+  //     /** Transformation (E x1 x2)(F1 & F2) ->
+  //      * (E x1)F1 & ... & (E x2)F2), where x2 does not occur in F1.
+  //      * Can be applied to many variables and disjunctions of arbitrary length */
+  //     EXISTS_AND,
+  //     /** obtained by permutations, e.g. f <=> g replaced by g <=> f */
+  //     PERMUT,
+  //     /** obtained by reordering equalities */
+  //     REORDER_EQ,
+  //     /** obtained by rewriting a positive equivalence
+  //      * f <=> ginto an implication f => g or g => f
+  //      */
+  //     HALF_EQUIV,
+  //     /** miniscoping */
+  //     MINISCOPE,
   /** normalizing inference */
   THEORY_NORMALIZATION,
   /** skolemization */
@@ -254,7 +254,7 @@ enum class InferenceRule : unsigned char {
   /* clause with literals added from AVATAR assertions of the parent */
   AVATAR_ASSERTION_REINTRODUCTION,
 
-   /* eager demodulation with combinator axioms */
+  /* eager demodulation with combinator axioms */
   COMBINATOR_DEMOD,
   /* normalising combinators */
   COMBINATOR_NORMALISE,
@@ -271,8 +271,11 @@ enum class InferenceRule : unsigned char {
   INTERNAL_SIMPLIFYING_INFERNCE_LAST,
 
   /** THIS DEFINES AN INTERVAL IN THIS ENUM WHERE ALL GENERATING INFERENCES SHOULD BELONG
-    * (see also INTERNAL_GENERATING_INFERNCE_LAST and isGeneratingInferenceRule below). */
+   * (see also INTERNAL_GENERATING_INFERNCE_LAST and isGeneratingInferenceRule below). */
   GENERIC_GENERATING_INFERNCE,
+  /** Fluted Specific inference */
+  SEPARATION,
+  FLUTED_RESOLUTION,
   /** resolution inference */
   RESOLUTION,
   /** constrained resolution inference */
@@ -512,8 +515,8 @@ enum class InferenceRule : unsigned char {
   THA_TRUNC4,
   THA_ARRAY_EXTENSIONALITY,
   THA_BOOLEAN_ARRAY_EXTENSIONALITY, // currently applied to a formula, so won't propagate to clause->isTheoryAxiom()
-  THA_BOOLEAN_ARRAY_WRITE1, // currently applied to a formula, so won't propagate to clause->isTheoryAxiom()
-  THA_BOOLEAN_ARRAY_WRITE2, // currently applied to a formula, so won't propagate to clause->isTheoryAxiom()
+  THA_BOOLEAN_ARRAY_WRITE1,         // currently applied to a formula, so won't propagate to clause->isTheoryAxiom()
+  THA_BOOLEAN_ARRAY_WRITE2,         // currently applied to a formula, so won't propagate to clause->isTheoryAxiom()
   THA_ARRAY_WRITE1,
   THA_ARRAY_WRITE2,
   /** acyclicity axiom for term algebras */
@@ -531,24 +534,24 @@ enum class InferenceRule : unsigned char {
   /** one of two axioms of FOOL (distinct constants or finite domain) */
   FOOL_AXIOM_TRUE_NEQ_FALSE,
   FOOL_AXIOM_ALL_IS_TRUE_OR_FALSE,
- 
+
   COMBINATOR_AXIOM,
-  
+
   FUNC_EXT_AXIOM,
 
   /** beginning of proxy funxtion axioms marker --*/
   PROXY_AXIOM,
   /* Equality proxy axiom */
   EQUALITY_PROXY_AXIOM,
-  /* Not proxy axiom */    
+  /* Not proxy axiom */
   NOT_PROXY_AXIOM,
   /* And proxy axiom */
   AND_PROXY_AXIOM,
-  /* OR proxy axiom */    
+  /* OR proxy axiom */
   OR_PROXY_AXIOM,
   /* Implies proxy axiom */
   IMPLIES_PROXY_AXIOM,
-  /* Forall proxy axiom */    
+  /* Forall proxy axiom */
   PI_PROXY_AXIOM,
   /* Exists proxy axiom */
   SIGMA_PROXY_AXIOM,
@@ -562,9 +565,10 @@ enum class InferenceRule : unsigned char {
 
 inline std::underlying_type<InferenceRule>::type toNumber(InferenceRule r) { return static_cast<std::underlying_type<InferenceRule>::type>(r); }
 
-inline bool isFormulaTransformation(InferenceRule r) {
+inline bool isFormulaTransformation(InferenceRule r)
+{
   return (toNumber(r) >= toNumber(InferenceRule::GENERIC_FORMULA_TRANSFORMATION) &&
-      toNumber(r) < toNumber(InferenceRule::INTERNAL_FORMULA_TRANSFORMATION_LAST));
+          toNumber(r) < toNumber(InferenceRule::INTERNAL_FORMULA_TRANSFORMATION_LAST));
 }
 
 /** Currently not enforced but (almost) assumed:
@@ -574,9 +578,10 @@ inline bool isFormulaTransformation(InferenceRule r) {
  * (CAREFUL: this is currently a problem for GLOBAL_SUBSUMPTION)
  * - the age of the corresponding Clause is the same as that of this main premise
  **/
-inline bool isSimplifyingInferenceRule(InferenceRule r) {
+inline bool isSimplifyingInferenceRule(InferenceRule r)
+{
   return (toNumber(r) >= toNumber(InferenceRule::GENERIC_SIMPLIFYING_INFERNCE) &&
-      toNumber(r) < toNumber(InferenceRule::INTERNAL_SIMPLIFYING_INFERNCE_LAST));
+          toNumber(r) < toNumber(InferenceRule::INTERNAL_SIMPLIFYING_INFERNCE_LAST));
 }
 
 /**
@@ -585,42 +590,48 @@ inline bool isSimplifyingInferenceRule(InferenceRule r) {
  * - therefore they operate on Clauses
  * - the age of the corresponding Clause is computed as the max over parent's ages +1
  */
-inline bool isGeneratingInferenceRule(InferenceRule r) {
+inline bool isGeneratingInferenceRule(InferenceRule r)
+{
   return (toNumber(r) >= toNumber(InferenceRule::GENERIC_GENERATING_INFERNCE) &&
-      toNumber(r) < toNumber(InferenceRule::INTERNAL_GENERATING_INFERNCE_LAST));
+          toNumber(r) < toNumber(InferenceRule::INTERNAL_GENERATING_INFERNCE_LAST));
 }
 
-inline bool isInternalTheoryAxiomRule(InferenceRule r) {
+inline bool isInternalTheoryAxiomRule(InferenceRule r)
+{
   return (toNumber(r) >= toNumber(InferenceRule::GENERIC_THEORY_AXIOM) &&
-      toNumber(r) < toNumber(InferenceRule::INTERNAL_THEORY_AXIOM_LAST));
+          toNumber(r) < toNumber(InferenceRule::INTERNAL_THEORY_AXIOM_LAST));
 }
 
-inline bool isCombinatorAxiomRule(InferenceRule r) {
+inline bool isCombinatorAxiomRule(InferenceRule r)
+{
   return r == InferenceRule::COMBINATOR_AXIOM;
 }
 
-inline bool isProxyAxiomRule(InferenceRule r) {
+inline bool isProxyAxiomRule(InferenceRule r)
+{
   return (toNumber(r) >= toNumber(InferenceRule::PROXY_AXIOM) &&
-      toNumber(r) < toNumber(InferenceRule::INTERNAL_THEORY_AXIOM_LAST));
+          toNumber(r) < toNumber(InferenceRule::INTERNAL_THEORY_AXIOM_LAST));
 }
 
-inline bool isExternalTheoryAxiomRule(InferenceRule r) {
+inline bool isExternalTheoryAxiomRule(InferenceRule r)
+{
   return r == InferenceRule::EXTERNAL_THEORY_AXIOM;
 }
 
-inline bool isSatRefutationRule(InferenceRule r) {
+inline bool isSatRefutationRule(InferenceRule r)
+{
   return (r == InferenceRule::AVATAR_REFUTATION) ||
-         (r == InferenceRule::AVATAR_REFUTATION_SMT) ||
-         (r == InferenceRule::GLOBAL_SUBSUMPTION);
+      (r == InferenceRule::AVATAR_REFUTATION_SMT) ||
+      (r == InferenceRule::GLOBAL_SUBSUMPTION);
 }
 
 std::string inputTypeName(UnitInputType type);
 std::string ruleName(InferenceRule rule);
 
 /*
-* The following structs are here just that we can have specialized overloads for the Inference constructor (see below)
-* There should be not computational overhead under modern compilers.
-*/
+ * The following structs are here just that we can have specialized overloads for the Inference constructor (see below)
+ * There should be not computational overhead under modern compilers.
+ */
 
 struct FromInput {
   FromInput(UnitInputType it) : inputType(it) {}
@@ -633,54 +644,53 @@ struct TheoryAxiom {
 };
 
 struct FormulaTransformation {
-  FormulaTransformation(InferenceRule r, Unit* p) : rule(r), premise(p) {}
+  FormulaTransformation(InferenceRule r, Unit *p) : rule(r), premise(p) {}
   InferenceRule rule;
-  Unit* premise;
+  Unit *premise;
 };
 
 struct FormulaTransformationMany {
-  FormulaTransformationMany(InferenceRule r, UnitList* p) : rule(r), premises(p) {}
+  FormulaTransformationMany(InferenceRule r, UnitList *p) : rule(r), premises(p) {}
   InferenceRule rule;
-  UnitList* premises;
+  UnitList *premises;
 };
 
 struct SimplifyingInference1 {
-  SimplifyingInference1(InferenceRule r, Clause* main_premise) : rule(r), premise(main_premise) {}
+  SimplifyingInference1(InferenceRule r, Clause *main_premise) : rule(r), premise(main_premise) {}
   InferenceRule rule;
-  Clause* premise;
+  Clause *premise;
 };
 
 struct SimplifyingInference2 {
-  SimplifyingInference2(InferenceRule r, Clause* main_premise, Clause* other_premise) :
-    rule(r), premise1(main_premise), premise2(other_premise) {}
+  SimplifyingInference2(InferenceRule r, Clause *main_premise, Clause *other_premise) : rule(r), premise1(main_premise), premise2(other_premise) {}
   InferenceRule rule;
-  Clause* premise1;
-  Clause* premise2;
+  Clause *premise1;
+  Clause *premise2;
 };
 
 struct SimplifyingInferenceMany {
-  SimplifyingInferenceMany(InferenceRule r, UnitList* prems) : rule(r), premises(prems) {}
+  SimplifyingInferenceMany(InferenceRule r, UnitList *prems) : rule(r), premises(prems) {}
   InferenceRule rule;
-  UnitList* premises;
+  UnitList *premises;
 };
 
 struct GeneratingInference1 {
-  GeneratingInference1(InferenceRule r, Clause* p) : rule(r), premise(p) {}
+  GeneratingInference1(InferenceRule r, Clause *p) : rule(r), premise(p) {}
   InferenceRule rule;
-  Clause* premise;
+  Clause *premise;
 };
 
 struct GeneratingInference2 {
-  GeneratingInference2(InferenceRule r, Clause* p1, Clause* p2) : rule(r), premise1(p1), premise2(p2) {}
+  GeneratingInference2(InferenceRule r, Clause *p1, Clause *p2) : rule(r), premise1(p1), premise2(p2) {}
   InferenceRule rule;
-  Clause* premise1;
-  Clause* premise2;
+  Clause *premise1;
+  Clause *premise2;
 };
 
 struct GeneratingInferenceMany {
-  GeneratingInferenceMany(InferenceRule r, UnitList* prems) : rule(r), premises(prems) {}
+  GeneratingInferenceMany(InferenceRule r, UnitList *prems) : rule(r), premises(prems) {}
   InferenceRule rule;
-  UnitList* premises;
+  UnitList *premises;
 };
 
 struct NonspecificInference0 {
@@ -690,34 +700,33 @@ struct NonspecificInference0 {
 };
 
 struct NonspecificInference1 {
-  NonspecificInference1(InferenceRule r, Unit* p) : rule(r), premise(p) {}
+  NonspecificInference1(InferenceRule r, Unit *p) : rule(r), premise(p) {}
   InferenceRule rule;
-  Unit* premise;
+  Unit *premise;
 };
 
 struct NonspecificInference2 {
-  NonspecificInference2(InferenceRule r, Unit* p1, Unit* p2) : rule(r), premise1(p1), premise2(p2) {}
+  NonspecificInference2(InferenceRule r, Unit *p1, Unit *p2) : rule(r), premise1(p1), premise2(p2) {}
   InferenceRule rule;
-  Unit* premise1;
-  Unit* premise2;
+  Unit *premise1;
+  Unit *premise2;
 };
 
 struct NonspecificInferenceMany {
-  NonspecificInferenceMany(InferenceRule r, UnitList* prems) : rule(r), premises(prems) {}
+  NonspecificInferenceMany(InferenceRule r, UnitList *prems) : rule(r), premises(prems) {}
   InferenceRule rule;
-  UnitList* premises;
+  UnitList *premises;
 };
 
 struct FromSatRefutation; // defined in SATInference.hpp
 
 class Inference;
-std::ostream& operator<<(std::ostream& out, Inference const& self);
+std::ostream &operator<<(std::ostream &out, Inference const &self);
 
 /**
  * Class to represent inferences
  */
-class Inference
-{
+class Inference {
 private:
   // don't construct on the heap
   USE_ALLOCATOR(Inference);
@@ -728,7 +737,8 @@ private:
     INFERENCE_FROM_SAT_REFUTATION
   };
 
-  void initDefault(UnitInputType inputType, InferenceRule r) {
+  void initDefault(UnitInputType inputType, InferenceRule r)
+  {
     _inputType = inputType;
     _rule = r;
     _included = false;
@@ -741,46 +751,46 @@ private:
   }
 
   void init0(UnitInputType inputType, InferenceRule r);
-  void init1(InferenceRule r, Unit* premise);
-  void init2(InferenceRule r, Unit* premise1, Unit* premise2);
-  void initMany(InferenceRule r, UnitList* premises);
+  void init1(InferenceRule r, Unit *premise);
+  void init2(InferenceRule r, Unit *premise1, Unit *premise2);
+  void initMany(InferenceRule r, UnitList *premises);
 
 public:
   /* FromInput inferences are automatically InferenceRule::INPUT. */
-  Inference(const FromInput& fi);
+  Inference(const FromInput &fi);
 
   /* Theory axioms are automatically of inputType AXIOM.
    * and the corresponding rule should satisfy isInternalTheoryAxiomRule or isExternalTheoryAxiomRule
    * CAREFUL: extending what TheoryAxiomRule is influences the theory_split_queue heuristic
    **/
-  Inference(const TheoryAxiom& ta);
+  Inference(const TheoryAxiom &ta);
 
   /* A formula transformation inference automatically propagates the _included flag from the parent to the child
      (later during clausal proof search, currently, this is not done anymore)*/
-  Inference(const FormulaTransformation& ft);
+  Inference(const FormulaTransformation &ft);
   // _included propagated from the first premise here
-  Inference(const FormulaTransformationMany& ft);
+  Inference(const FormulaTransformationMany &ft);
 
   /* A generating inference automatically computes age as 1 + the maximum over the parents' age */
-  Inference(const GeneratingInference1& gi);
-  Inference(const GeneratingInference2& gi);
-  Inference(const GeneratingInferenceMany& gi);
+  Inference(const GeneratingInference1 &gi);
+  Inference(const GeneratingInference2 &gi);
+  Inference(const GeneratingInferenceMany &gi);
 
   /* A simplifying inference has a main premise and possibly also side premises.
    * The age is automatically computed as the age of the main premise */
-  Inference(const SimplifyingInference1& si);
-  Inference(const SimplifyingInference2& si);
-  Inference(const SimplifyingInferenceMany& si);
+  Inference(const SimplifyingInference1 &si);
+  Inference(const SimplifyingInference2 &si);
+  Inference(const SimplifyingInferenceMany &si);
 
   /** No special propagation, no extra checks. Use sparingly. */
-  Inference(const NonspecificInference0& gi);
-  Inference(const NonspecificInference1& gi);
-  Inference(const NonspecificInference2& gi);
-  Inference(const NonspecificInferenceMany& gi);
+  Inference(const NonspecificInference0 &gi);
+  Inference(const NonspecificInference1 &gi);
+  Inference(const NonspecificInference2 &gi);
+  Inference(const NonspecificInferenceMany &gi);
 
-  Inference(const FromSatRefutation& fsr);
+  Inference(const FromSatRefutation &fsr);
 
-  Inference(const Inference&) = default;
+  Inference(const Inference &) = default;
 
   /**
    * A class that iterates over parents.
@@ -789,20 +799,20 @@ public:
   struct Iterator {
     /** The content, can be anything (interpretation depends on Kind) */
     union {
-      void* pointer;
+      void *pointer;
       int integer;
     };
   };
 
   Iterator iterator() const;
-  bool hasNext(Iterator& it) const;
-  Unit* next(Iterator& it) const;
+  bool hasNext(Iterator &it) const;
+  Unit *next(Iterator &it) const;
 
   /*
-  * The supporting heap allocated objects are deleted
-  * (The unitList of INFERENCE_MANY and, additionally,
-  * the FromSatRefutationInfo of INFERENCE_FROM_SAT_REFUTATION).
-  */
+   * The supporting heap allocated objects are deleted
+   * (The unitList of INFERENCE_MANY and, additionally,
+   * the FromSatRefutationInfo of INFERENCE_FROM_SAT_REFUTATION).
+   */
   void destroyDirectlyOwned();
   /**
    * Decrease reference counters in referred units.
@@ -828,10 +838,15 @@ public:
    * (e.g. on Unit construction abort or exception occurring).
    */
   class Destroyer {
-    Inference* _destroyee;
+    Inference *_destroyee;
+
   public:
-    Destroyer(Inference& i) : _destroyee(&i) {}
-    ~Destroyer() { if(_destroyee) _destroyee->destroy(); }
+    Destroyer(Inference &i) : _destroyee(&i) {}
+    ~Destroyer()
+    {
+      if (_destroyee)
+        _destroyee->destroy();
+    }
     void disable() { _destroyee = nullptr; }
   };
 
@@ -843,7 +858,7 @@ public:
    **/
   void updateStatistics();
 
- friend std::ostream& operator<<(std::ostream& out, Inference const& self);
+  friend std::ostream &operator<<(std::ostream &out, Inference const &self);
 
   /**
    * To implement lazy minimization of proofs coming from a SAT solver
@@ -863,7 +878,7 @@ public:
   /** return the input type of the unit */
   UnitInputType inputType() const { return (UnitInputType)_inputType; }
   /** set the input type of the unit */
-  void setInputType(UnitInputType it) { _inputType=it; }
+  void setInputType(UnitInputType it) { _inputType = it; }
   /** return true if inputType relates to a goal **/
   bool derivedFromGoal() const { return toNumber(_inputType) > toNumber(UnitInputType::ASSUMPTION); }
 
@@ -897,17 +912,20 @@ public:
    *
    * TODO: handle the exhaustiveness axiom, which should be added as clause
    */
-  bool isTheoryAxiom() const {
+  bool isTheoryAxiom() const
+  {
     return isInternalTheoryAxiomRule(_rule) || isExternalTheoryAxiomRule(_rule);
   }
 
-  bool isCombinatorAxiom() const {
+  bool isCombinatorAxiom() const
+  {
     return isCombinatorAxiomRule(_rule);
   }
 
-  bool isProxyAxiom() const {
+  bool isProxyAxiom() const
+  {
     return isProxyAxiomRule(_rule);
-  }  
+  }
 
   /*
    * returns true if clause is an external theory axiom
@@ -924,7 +942,8 @@ public:
    * will return false for c_i. In particular, adding the same formula as a clause or as formula could cause
    * different behavior by Vampire, which is probably a bad thing.
    */
-  bool isExternalTheoryAxiom() const {
+  bool isExternalTheoryAxiom() const
+  {
     return isExternalTheoryAxiomRule(_rule);
   }
 
@@ -948,13 +967,13 @@ public:
   void setPureTheoryDescendant(bool val) { _isPureTheoryDescendant = val; }
 
   bool isCombAxiomsDescendant() const { return _combAxiomsDescendant; }
-  void setCombAxiomsDescendant(bool val) { _combAxiomsDescendant=val; }
+  void setCombAxiomsDescendant(bool val) { _combAxiomsDescendant = val; }
 
   bool isProxyAxiomsDescendant() const { return _proxyAxiomsDescendant; }
-  void setProxyAxiomsDescendant(bool val) { _proxyAxiomsDescendant=val; }
+  void setProxyAxiomsDescendant(bool val) { _proxyAxiomsDescendant = val; }
 
   bool isHolAxiomsDescendant() const { return _holAxiomsDescendant; }
-  void setHolAxiomsDescendant(bool val) { _holAxiomsDescendant=val; }
+  void setHolAxiomsDescendant(bool val) { _holAxiomsDescendant = val; }
 
   unsigned inductionDepth() const { return _inductionDepth; }
   void setInductionDepth(unsigned d) { _inductionDepth = d; }
@@ -962,19 +981,25 @@ public:
   unsigned xxNarrows() const { return _XXNarrows; }
   /** used to propagate in AVATAR **/
   void setXXNarrows(unsigned n) { _XXNarrows = n; }
-  void incXXNarrows(){ if(_XXNarrows < 8){ _XXNarrows++; } }
+  void incXXNarrows()
+  {
+    if (_XXNarrows < 8) {
+      _XXNarrows++;
+    }
+  }
 
   unsigned reductions() const { return _reductions; }
-  void setReductions(unsigned r) { _reductions = r; } 
-  void increaseReductions(unsigned n){ _reductions += n; }
+  void setReductions(unsigned r) { _reductions = r; }
+  void increaseReductions(unsigned n) { _reductions += n; }
 
   void computeTheoryRunningSums();
 
-  SplitSet* splits() const { return _splits; }
-  void setSplits(SplitSet* splits) {
+  SplitSet *splits() const { return _splits; }
+  void setSplits(SplitSet *splits)
+  {
     ASS(splits != nullptr);
     ASS(!_splits);
-    _splits=splits;
+    _splits = splits;
   }
 
   /** Return the age */
@@ -1019,7 +1044,7 @@ private:
   /** age */
   unsigned _age;
 
-  SplitSet* _splits;
+  SplitSet *_splits;
 
   /**
    * General storage for all Kinds of Inference:
@@ -1031,9 +1056,8 @@ private:
    * - uses ptr2 to point to a heap allocated struct for the sat premises and assumption
    *  which waits to be used during minimisation call; ptr2 can be empty (this means minimisation will be a noop)
    **/
-  void* _ptr1;
-  void* _ptr2;
-
+  void *_ptr1;
+  void *_ptr2;
 
 public:
   // counting the leafs (in the tree rather than dag sense)

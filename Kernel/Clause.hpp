@@ -45,18 +45,18 @@ using namespace Lib;
  * - Increase a relevant counter in the env.statistics object
  */
 class Clause
-  : public Unit
-{
+    : public Unit {
 private:
   /** Should never be used, declared just to get rid of compiler warning */
   ~Clause() { ASSERTION_VIOLATION; }
   /** Should never be used, just that compiler requires it */
-  void operator delete(void* ptr) { ASSERTION_VIOLATION; }
+  void operator delete(void *ptr) { ASSERTION_VIOLATION; }
 
-  template<class VarIt>
-  void collectVars2(DHSet<unsigned>& acc);
+  template <class VarIt>
+  void collectVars2(DHSet<unsigned> &acc);
+
 public:
-  DECL_ELEMENT_TYPE(Literal*);
+  DECL_ELEMENT_TYPE(Literal *);
 
   /** Storage kind */
   enum Store {
@@ -73,36 +73,51 @@ public:
     SELECTED = 4u
   };
 
+  /** Fluted Fragment Specific Optimization */
+  enum FlutedOrdering {
+    STRICTLY_MAXIMAL = 0,
+    MAXIMAL = 1,
+    NON_MAXIMAL = 2
+  };
+  DHMap<Literal *, FlutedOrdering> _flutedOrdering;
 
 private:
-  Clause(Literal* const* lits, unsigned length, Inference inf);
-  void* operator new(size_t,unsigned length);
+  Clause(Literal *const *lits, unsigned length, Inference inf);
+  void *operator new(size_t, unsigned length);
+
 public:
-  void operator delete(void* ptr,unsigned length);
+  void operator delete(void *ptr, unsigned length);
 
-  static Clause* fromArray(Literal*const* lits, unsigned size, Inference inf)
-  { return new(size) Clause(lits, size, std::move(inf)); }
-
-  static Clause* fromLiterals(std::initializer_list<Literal*> lits, Inference inf)
-  { return fromArray(std::data(lits), lits.size(), std::move(inf)); }
-
-  static Clause* empty(Inference inf)
-  { return fromLiterals({}, inf); }
-
-
-  static Clause* fromStack(const Stack<Literal*>& lits, Inference inf)
-  { return new(lits.size()) Clause(lits.begin(), lits.size(), std::move(inf)); }
-
-  template<class Iter>
-  static Clause* fromIterator(Iter litit, const Inference& inf)
+  static Clause *fromArray(Literal *const *lits, unsigned size, Inference inf)
   {
-    static Stack<Literal*> st;
+    return new (size) Clause(lits, size, std::move(inf));
+  }
+
+  static Clause *fromLiterals(std::initializer_list<Literal *> lits, Inference inf)
+  {
+    return fromArray(std::data(lits), lits.size(), std::move(inf));
+  }
+
+  static Clause *empty(Inference inf)
+  {
+    return fromLiterals({}, inf);
+  }
+
+  static Clause *fromStack(const Stack<Literal *> &lits, Inference inf)
+  {
+    return new (lits.size()) Clause(lits.begin(), lits.size(), std::move(inf));
+  }
+
+  template <class Iter>
+  static Clause *fromIterator(Iter litit, const Inference &inf)
+  {
+    static Stack<Literal *> st;
     st.reset();
     st.loadFromIterator(litit);
     return fromStack(st, inf);
   }
 
-  static Clause* fromClause(Clause* c);
+  static Clause *fromClause(Clause *c);
 
   /**
    * Return the (reference to) the nth literal
@@ -113,11 +128,15 @@ public:
    * getLiteralPosition method), or during the literal selection (as the
    * _literalPositions object is updated in call to the setSelected method).
    */
-  Literal*& operator[] (int n)
-  { return _literals[n]; }
+  Literal *&operator[](int n)
+  {
+    return _literals[n];
+  }
   /** Return the (reference to) the nth literal */
-  Literal*const& operator[] (int n) const
-  { return _literals[n]; }
+  Literal *const &operator[](int n) const
+  {
+    return _literals[n];
+  }
 
   /** Return the length (number of literals) */
   unsigned length() const { return _length; }
@@ -127,7 +146,7 @@ public:
   /** Return a pointer to the array of literals.
    * Caller should not manipulate literals, with the exception of
    * clause construction and literal selection. */
-  Literal** literals() { return _literals; }
+  Literal **literals() { return _literals; }
 
   /** True if the clause is empty */
   bool isEmpty() const { return _length == 0; }
@@ -162,7 +181,7 @@ public:
   /** Return the weight = sum of literal weights (usually the number of symbols) */
   unsigned weight() const
   {
-    if(!_weight) {
+    if (!_weight) {
       _weight = computeWeight();
     }
     return _weight;
@@ -172,30 +191,31 @@ public:
   /**
    * weight used for clause selection
    */
-  unsigned weightForClauseSelection(const Shell::Options& opt)
+  unsigned weightForClauseSelection(const Shell::Options &opt)
   {
-    if(!_weightForClauseSelection) {
+    if (!_weightForClauseSelection) {
       _weightForClauseSelection = computeWeightForClauseSelection(opt);
     }
     return _weightForClauseSelection;
   }
-  unsigned computeWeightForClauseSelection(const Shell::Options& opt) const;
+  unsigned computeWeightForClauseSelection(const Shell::Options &opt) const;
 
   /*
    * single source of truth for computation of weightForClauseSelection
    */
-  static unsigned computeWeightForClauseSelection(unsigned w, unsigned splitWeight, unsigned numeralWeight, bool derivedFromGoal, const Shell::Options& opt);
+  static unsigned computeWeightForClauseSelection(unsigned w, unsigned splitWeight, unsigned numeralWeight, bool derivedFromGoal, const Shell::Options &opt);
 
   /** Return the color of a clause */
   Color color() const
   {
-    if(static_cast<Color>(_color)==COLOR_INVALID) {
+    if (static_cast<Color>(_color) == COLOR_INVALID) {
       computeColor();
     }
     return static_cast<Color>(_color);
   }
   void computeColor() const;
-  void updateColor(Color c) {
+  void updateColor(Color c)
+  {
     _color = c;
   }
 
@@ -208,7 +228,7 @@ public:
 
   bool skip() const;
 
-  unsigned getLiteralPosition(Literal* lit);
+  unsigned getLiteralPosition(Literal *lit);
   void notifyLiteralReorder();
 
   bool shouldBeDestroyed();
@@ -217,7 +237,7 @@ public:
   void incRefCnt() { _refCnt++; }
   void decRefCnt()
   {
-    ASS_G(_refCnt,0);
+    ASS_G(_refCnt, 0);
     _refCnt--;
     destroyIfUnnecessary();
   }
@@ -226,19 +246,20 @@ public:
   void invalidateMyReductionRecords()
   {
     _reductionTimestamp++;
-    if(_reductionTimestamp==0) {
+    if (_reductionTimestamp == 0) {
       INVALID_OPERATION("Clause reduction timestamp overflow!");
     }
   }
-  bool validReductionRecord(unsigned savedTimestamp) {
+  bool validReductionRecord(unsigned savedTimestamp)
+  {
     return savedTimestamp == _reductionTimestamp;
   }
 
-  auto getSelectedLiteralIterator() { return arrayIter(*this,numSelected()); }
-  auto iterLits()                   { return arrayIter(*this,size()); }
-  auto iterLits() const             { return arrayIter(*this,size()); }
+  auto getSelectedLiteralIterator() { return arrayIter(*this, numSelected()); }
+  auto iterLits() { return arrayIter(*this, size()); }
+  auto iterLits() const { return arrayIter(*this, size()); }
   // TODO remove this
-  auto getLiteralIterator()         { return arrayIter(*this,size()); }
+  auto getLiteralIterator() { return arrayIter(*this, size()); }
 
   bool isGround();
   bool isPropositional();
@@ -246,12 +267,12 @@ public:
 
   VirtualIterator<unsigned> getVariableIterator();
 
-  bool contains(Literal* lit);
+  bool contains(Literal *lit);
 #if VDEBUG
   void assertValid();
 #endif
 
-  SplitSet* splits() const { return _inference.splits(); }
+  SplitSet *splits() const { return _inference.splits(); }
   bool noSplits() const;
 
   /**
@@ -261,7 +282,8 @@ public:
    * we depend on the invariant that splits are set only once, and that splits are set before clause-weights are
    * computed and cached (which happens at the first call to weight())
    */
-  void setSplits(SplitSet* splits) {
+  void setSplits(SplitSet *splits)
+  {
     ASS(_weight == 0);
     _inference.setSplits(splits);
   }
@@ -276,42 +298,42 @@ public:
   void setAux()
   {
     ASS(_auxInUse);
-    _auxTimestamp=_auxCurrTimestamp;
+    _auxTimestamp = _auxCurrTimestamp;
   }
 
   /** Set auxiliary value of this clause. */
-  void setAux(void* ptr)
+  void setAux(void *ptr)
   {
     ASS(_auxInUse);
-    _auxTimestamp=_auxCurrTimestamp;
-    _auxData=ptr;
+    _auxTimestamp = _auxCurrTimestamp;
+    _auxData = ptr;
   }
   /**
    * If there is an auxiliary value stored in this clause,
    * return true and assign it into @b ptr. Otherwise
    * return false.
    */
-  template<typename T>
-  bool tryGetAux(T*& ptr)
+  template <typename T>
+  bool tryGetAux(T *&ptr)
   {
     ASS(_auxInUse);
-    if(_auxTimestamp==_auxCurrTimestamp) {
-      ptr=static_cast<T*>(_auxData);
+    if (_auxTimestamp == _auxCurrTimestamp) {
+      ptr = static_cast<T *>(_auxData);
       return true;
     }
     return false;
   }
   /** Return auxiliary value stored in this clause. */
-  template<typename T>
-  T* getAux()
+  template <typename T>
+  T *getAux()
   {
     ASS(_auxInUse);
-    ASS(_auxTimestamp==_auxCurrTimestamp);
-    return static_cast<T*>(_auxData);
+    ASS(_auxTimestamp == _auxCurrTimestamp);
+    return static_cast<T *>(_auxData);
   }
   bool hasAux()
   {
-    return _auxTimestamp==_auxCurrTimestamp;
+    return _auxTimestamp == _auxCurrTimestamp;
   }
 
   /**
@@ -323,10 +345,10 @@ public:
   {
 #if VDEBUG
     ASS(!_auxInUse);
-    _auxInUse=true;
+    _auxInUse = true;
 #endif
     _auxCurrTimestamp++;
-    if(_auxCurrTimestamp==0) {
+    if (_auxCurrTimestamp == 0) {
       INVALID_OPERATION("Auxiliary clause value timestamp overflow!");
     }
   }
@@ -338,25 +360,25 @@ public:
   {
 #if VDEBUG
     ASS(_auxInUse);
-    _auxInUse=false;
+    _auxInUse = false;
 #endif
   }
 
   unsigned splitWeight() const;
   unsigned getNumeralWeight() const;
 
-  void collectVars(DHSet<unsigned>& acc);
-  void collectUnstableVars(DHSet<unsigned>& acc);
-
+  void collectVars(DHSet<unsigned> &acc);
+  void collectUnstableVars(DHSet<unsigned> &acc);
 
   unsigned varCnt();
   unsigned maxVar(); // useful to create fresh variables w.r.t. the clause
 
   unsigned numPositiveLiterals(); // number of positive literals in the clause
 
-  Literal* getAnswerLiteral();
+  Literal *getAnswerLiteral();
 
-  bool hasAnswerLiteral() {
+  bool hasAnswerLiteral()
+  {
     return getAnswerLiteral() != nullptr;
   }
 
@@ -368,9 +390,9 @@ protected:
   /** clause color, or COLOR_INVALID if not determined yet */
   mutable unsigned _color : 2;
   /** Clause was matched as extensionality and is tracked in the extensionality
-    * clause container. The matching happens at activation. If the clause
-    * becomes passive and is removed from the container, also this bit is unset.
-    */
+   * clause container. The matching happens at activation. If the clause
+   * becomes passive and is removed from the container, also this bit is unset.
+   */
   unsigned _extensionality : 1;
   unsigned _extensionalityTag : 1;
   /** Clause is a splitting component. */
@@ -391,24 +413,23 @@ protected:
   /** for splitting: timestamp marking when has the clause been reduced or restored by splitting */
   unsigned _reductionTimestamp;
   /** a map that translates Literal* to its index in the clause */
-  InverseLookup<Literal>* _literalPositions;
+  InverseLookup<Literal> *_literalPositions;
 
   int _numActiveSplits;
 
   size_t _auxTimestamp;
-  void* _auxData;
+  void *_auxData;
 
   static size_t _auxCurrTimestamp;
 #if VDEBUG
   static bool _auxInUse;
 #endif
 
-
   /** Array of literals of this unit */
-  Literal* _literals[1];
+  Literal *_literals[1];
 }; // class Clause
 
-std::ostream& operator<<(std::ostream& out, Clause::Store const& clause);
-}
+std::ostream &operator<<(std::ostream &out, Clause::Store const &clause);
+} // namespace Kernel
 
 #endif

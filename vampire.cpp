@@ -87,7 +87,7 @@ int vampireReturnValue = VAMP_RESULT_STATUS_UNKNOWN;
  * Get Preprocessed Problem and Verify if it's Fluted (in dependence of env.options).
  */
 [[nodiscard]]
-bool VerifyFluteness()
+bool VerifyFluteness(Problem *problem)
 {
 #ifdef __linux__
   unsigned saveInstrLimit = env.options->instructionLimit();
@@ -96,11 +96,9 @@ bool VerifyFluteness()
   }
 #endif
 
-  Problem *prb = UIHelper::getInputProblem();
-
   FlutedFragment::Classifier classifier(env.options->showFluted());
   try {
-    return classifier.isInFlutedFragment(prb->units());
+    return classifier.isInFlutedFragment(problem->units());
   }
   catch (char const *&e) {
     cout << e << endl;
@@ -161,6 +159,14 @@ Problem *doProving(Problem *problem)
 
   ProvingHelper::runVampireSaturation(*prb, *env.options);
   return prb;
+}
+
+[[nodiscard]]
+Problem *doProvingFluted(Problem *problem)
+{
+  // TODO insert preporcessing here
+  ProvingHelper::runVampireSaturation(*problem, *env.options);
+  return problem;
 }
 
 /**
@@ -365,22 +371,37 @@ void outputMode(Problem *problem)
   vampireReturnValue = VAMP_RESULT_STATUS_SUCCESS;
 } // outputMode
 
-void flutedMode()
+void flutedMode(Problem *problem)
 {
   // these options could delete some clause and make the resolution useless
   env.options->set("sup", "off", false);
-  env.options->set("erd", "off", false);
-  env.options->set("fde", "none", false);
-  env.options->set("mep", "off", false);
+  env.options->set("updr", "off", false);
+  env.options->set("sims", "off", false);
+  env.options->set("fd", "off", false);
+  env.options->set("fs", "off", false);
+  env.options->set("fsr", "off", false);
+  env.options->set("av", "off", false);
+
+  ScopedPtr<Problem> prb(doProving(problem));
+
+  UIHelper::outputResult(std::cout);
+
+  if (env.statistics->terminationReason == Statistics::REFUTATION || env.statistics->terminationReason == Statistics::SATISFIABLE) {
+    vampireReturnValue = VAMP_RESULT_STATUS_SUCCESS;
+  }
+}
+
+void classifyMode(Problem *problem)
+{
+  // these options could delete some clause and make the resolution useless
   env.options->set("updr", "off", false);
   env.options->set("sfv", "off", false);
   env.options->set("sims", "off", false);
-  env.options->set("bd", "off", false);
   env.options->set("fd", "off", false);
   env.options->set("fs", "off", false);
   env.options->set("fsr", "off", false);
 
-  cout << (VerifyFluteness() ? "!" : "") << endl;
+  cout << "The problem is" << (VerifyFluteness(problem) ? "" : " not ") << "in the Fluted Fragment" << endl;
 
   vampireReturnValue = VAMP_RESULT_STATUS_SUCCESS;
 }
@@ -579,8 +600,11 @@ void axiomSelectionMode(Problem *problem)
 void dispatchByMode(Problem *problem)
 {
   switch (env.options->mode()) {
+    case Options::Mode::CLASSIFY:
+      classifyMode(problem);
+      break;
     case Options::Mode::FLUTED:
-      flutedMode();
+      flutedMode(problem);
       break;
     case Options::Mode::AXIOM_SELECTION:
       axiomSelectionMode(problem);

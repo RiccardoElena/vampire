@@ -42,15 +42,12 @@
 
 #include <cmath>
 
-
-
 #include "Clause.hpp"
 
 #undef RSTAT_COLLECTION
 #define RSTAT_COLLECTION 1
 
-namespace Kernel
-{
+namespace Kernel {
 
 using namespace std;
 using namespace Lib;
@@ -63,31 +60,31 @@ bool Clause::_auxInUse = false;
 #endif
 
 /** New clause */
-Clause::Clause(Literal* const* lits, unsigned length, Inference inf)
-  : Unit(Unit::CLAUSE, std::move(inf)),
-    _length(length),
-    _color(COLOR_INVALID),
-    _extensionality(false),
-    _extensionalityTag(false),
-    _component(false),
-    _store(NONE),
-    _numSelected(0),
-    _weight(0),
-    _weightForClauseSelection(0),
-    _refCnt(0),
-    _reductionTimestamp(0),
-    _literalPositions(0),
-    _numActiveSplits(0),
-    _auxTimestamp(0)
+Clause::Clause(Literal *const *lits, unsigned length, Inference inf)
+    : Unit(Unit::CLAUSE, std::move(inf)),
+      _length(length),
+      _color(COLOR_INVALID),
+      _extensionality(false),
+      _extensionalityTag(false),
+      _component(false),
+      _store(NONE),
+      _numSelected(0),
+      _weight(0),
+      _weightForClauseSelection(0),
+      _refCnt(0),
+      _reductionTimestamp(0),
+      _literalPositions(0),
+      _numActiveSplits(0),
+      _auxTimestamp(0)
 {
   // MS: TODO: not sure if this belongs here and whether EXTENSIONALITY_AXIOM input types ever appear anywhere (as a vampire-extension TPTP formula role)
-  if(inference().inputType() == UnitInputType::EXTENSIONALITY_AXIOM){
-    //cout << "Setting extensionality" << endl;
+  if (inference().inputType() == UnitInputType::EXTENSIONALITY_AXIOM) {
+    // cout << "Setting extensionality" << endl;
     _extensionalityTag = true;
     inference().setInputType(UnitInputType::AXIOM);
   }
 
-  for(unsigned i = 0; i < length; i++) {
+  for (unsigned i = 0; i < length; i++) {
     (*this)[i] = lits[i];
   }
 
@@ -95,9 +92,9 @@ Clause::Clause(Literal* const* lits, unsigned length, Inference inf)
   // TODO make unsigned
   if (env.options->traceBackward() && unsigned(env.options->traceBackward()) == number()) {
     traverseParentsPost(
-        [&](unsigned depth, Unit* unit) {
-          std::cout << "backward trace " <<  number() << ": " << repeatOutput("| ", depth) << unit->toString() << std::endl;
-      });
+        [&](unsigned depth, Unit *unit) {
+          std::cout << "backward trace " << number() << ": " << repeatOutput("| ", depth) << unit->toString() << std::endl;
+        });
   }
 
   // forward tracing
@@ -125,32 +122,32 @@ Clause::Clause(Literal* const* lits, unsigned length, Inference inf)
  * Allocate a clause having lits literals.
  * @since 18/05/2007 Manchester
  */
-void* Clause::operator new(size_t sz, unsigned lits)
+void *Clause::operator new(size_t sz, unsigned lits)
 {
-  ASS_EQ(sz,sizeof(Clause));
+  ASS_EQ(sz, sizeof(Clause));
 
   RSTAT_CTR_INC("clauses created");
 
-  //We have to get sizeof(Clause) + (_length-1)*sizeof(Literal*)
-  //this way, because _length-1 wouldn't behave well for
+  // We have to get sizeof(Clause) + (_length-1)*sizeof(Literal*)
+  // this way, because _length-1 wouldn't behave well for
   //_length==0 on x64 platform.
-  size_t size = sizeof(Clause) + lits * sizeof(Literal*);
-  size -= sizeof(Literal*);
+  size_t size = sizeof(Clause) + lits * sizeof(Literal *);
+  size -= sizeof(Literal *);
 
-  return ALLOC_KNOWN(size,"Clause");
+  return ALLOC_KNOWN(size, "Clause");
 }
 
-void Clause::operator delete(void* ptr,unsigned length)
+void Clause::operator delete(void *ptr, unsigned length)
 {
   RSTAT_CTR_INC("clauses deleted by delete operator");
 
-  //We have to get sizeof(Clause) + (_length-1)*sizeof(Literal*)
-  //this way, because _length-1 wouldn't behave well for
+  // We have to get sizeof(Clause) + (_length-1)*sizeof(Literal*)
+  // this way, because _length-1 wouldn't behave well for
   //_length==0 on x64 platform.
-  size_t size = sizeof(Clause) + length * sizeof(Literal*);
-  size -= sizeof(Literal*);
+  size_t size = sizeof(Clause) + length * sizeof(Literal *);
+  size -= sizeof(Literal *);
 
-  DEALLOC_KNOWN(ptr, size,"Clause");
+  DEALLOC_KNOWN(ptr, size, "Clause");
 }
 
 void Clause::destroyExceptInferenceObject()
@@ -163,15 +160,14 @@ void Clause::destroyExceptInferenceObject()
 
   RSTAT_CTR_INC("clauses deleted");
 
-  //We have to get sizeof(Clause) + (_length-1)*sizeof(Literal*)
-  //this way, because _length-1 wouldn't behave well for
+  // We have to get sizeof(Clause) + (_length-1)*sizeof(Literal*)
+  // this way, because _length-1 wouldn't behave well for
   //_length==0 on x64 platform.
-  size_t size = sizeof(Clause) + _length * sizeof(Literal*);
-  size -= sizeof(Literal*);
+  size_t size = sizeof(Clause) + _length * sizeof(Literal *);
+  size -= sizeof(Literal *);
 
-  DEALLOC_KNOWN(this, size,"Clause");
+  DEALLOC_KNOWN(this, size, "Clause");
 }
-
 
 /**
  * Create a clause with the same content as @c c. The inference of the
@@ -181,9 +177,9 @@ void Clause::destroyExceptInferenceObject()
  *
  * Splitting history from @c c is also copied into the new clause.
  */
-Clause* Clause::fromClause(Clause* c)
+Clause *Clause::fromClause(Clause *c)
 {
-  Clause* res = fromIterator(c->iterLits(), SimplifyingInference1(InferenceRule::REORDER_LITERALS, c));
+  Clause *res = fromIterator(c->iterLits(), SimplifyingInference1(InferenceRule::REORDER_LITERALS, c));
 
   if (c->splits()) {
     res->setSplits(c->splits());
@@ -195,7 +191,7 @@ Clause* Clause::fromClause(Clause* c)
 bool Clause::shouldBeDestroyed()
 {
   return (_store == NONE) && _refCnt == 0 &&
-    !isFromPreprocessing();
+      !isFromPreprocessing();
 }
 
 /**
@@ -216,19 +212,19 @@ void Clause::destroyIfUnnecessary()
  */
 void Clause::destroy()
 {
-  static Stack<Clause*> toDestroy(32);
-  Clause* cl = this;
-  for(;;) {
+  static Stack<Clause *> toDestroy(32);
+  Clause *cl = this;
+  for (;;) {
     if (env.options->proofExtra() == Options::ProofExtra::FULL) {
       env.proofExtra.remove(cl);
     }
     Inference::Iterator it = cl->_inference.iterator();
     while (cl->_inference.hasNext(it)) {
-      Unit* refU = cl->_inference.next(it);
+      Unit *refU = cl->_inference.next(it);
       if (!refU->isClause()) {
         continue;
       }
-      Clause* refCl = static_cast<Clause*> (refU);
+      Clause *refCl = static_cast<Clause *>(refU);
       refCl->_refCnt--;
       if (refCl->shouldBeDestroyed()) {
         toDestroy.push(refCl);
@@ -250,16 +246,19 @@ void Clause::destroy()
 void Clause::setStore(Store s)
 {
 #if VDEBUG
-  //assure there is one selected clause
-  static Clause* selected=0;
-  if (_store==SELECTED) {
+  // assure there is one selected clause
+  static Clause *selected = 0;
+  // std::cout << "setStore " << s << " for " << this->toString() << " selected " << selected << " _store " << _store << std::endl;
+  if (_store == SELECTED) {
     ASS_EQ(selected, this);
-    selected=0;
+    selected = 0;
+    // std::cout << "halo? " << selected << std::endl;
   }
-  if (s==SELECTED) {
+  if (s == SELECTED) {
     ASS_EQ(selected, 0);
-    selected=this;
+    selected = this;
   }
+  // std::cout << "it's over" << std::endl;
 #endif
   _store = s;
   destroyIfUnnecessary();
@@ -286,14 +285,14 @@ bool Clause::isPropositional()
  */
 bool Clause::isHorn()
 {
-  bool posFound=false;
-  for (Literal* l : iterLits()) {
+  bool posFound = false;
+  for (Literal *l : iterLits()) {
     if (l->isPositive()) {
       if (posFound) {
         return false;
       }
       else {
-        posFound=true;
+        posFound = true;
       }
     }
   }
@@ -305,12 +304,12 @@ bool Clause::isHorn()
  */
 VirtualIterator<unsigned> Clause::getVariableIterator()
 {
-  return pvi( getUniquePersistentIterator(
+  return pvi(getUniquePersistentIterator(
       getMappingIterator(
-	  getMapAndFlattenIterator(
-	      iterLits(),
-	      VariableIteratorFn()),
-	  OrdVarNumberExtractorFn())));
+          getMapAndFlattenIterator(
+              iterLits(),
+              VariableIteratorFn()),
+          OrdVarNumberExtractorFn())));
 }
 
 /**
@@ -329,10 +328,11 @@ std::string Clause::literalsOnlyToString() const
 {
   if (_length == 0) {
     return "$false";
-  } else {
+  }
+  else {
     std::string result;
     result += _literals[0]->toString();
-    for(unsigned i = 1; i < _length; i++) {
+    for (unsigned i = 1; i < _length; i++) {
       result += " | ";
       result += _literals[i]->toString();
     }
@@ -383,20 +383,20 @@ std::string Clause::toString() const
   // print inference and ids of parent clauses
   result += " " + inferenceAsString();
 
-  if(env.options->proofExtra() != Options::ProofExtra::OFF){
+  if (env.options->proofExtra() != Options::ProofExtra::OFF) {
     // print statistics: each entry should have the form key:value
     result += std::string(" {");
-      
+
     result += std::string("a:") + Int::toString(age());
     unsigned weight = (_weight ? _weight : computeWeight());
     result += std::string(",w:") + Int::toString(weight);
-    
+
     unsigned weightForClauseSelection = (_weightForClauseSelection ? _weightForClauseSelection : computeWeightForClauseSelection(*env.options));
-    if(weightForClauseSelection!=weight){
+    if (weightForClauseSelection != weight) {
       result += std::string(",wCS:") + Int::toString(weightForClauseSelection);
     }
 
-    if (numSelected()>0) {
+    if (numSelected() > 0) {
       result += std::string(",nSel:") + Int::toString(numSelected());
     }
 
@@ -404,24 +404,24 @@ std::string Clause::toString() const
       result += std::string(",col:") + Int::toString(color());
     }
 
-    if(derivedFromGoal()){
+    if (derivedFromGoal()) {
       result += std::string(",goal:1");
     }
-    if(env.maxSineLevel > 1) { // this is a cryptic way of saying "did we run Sine to compute sine levels?"
-      result += std::string(",sine:")+Int::toString((unsigned)_inference.getSineLevel());
+    if (env.maxSineLevel > 1) { // this is a cryptic way of saying "did we run Sine to compute sine levels?"
+      result += std::string(",sine:") + Int::toString((unsigned)_inference.getSineLevel());
     }
 
-    if(isPureTheoryDescendant()){
+    if (isPureTheoryDescendant()) {
       result += std::string(",ptD:1");
     }
 
-    if(env.options->induction() != Shell::Options::Induction::NONE){
+    if (env.options->induction() != Shell::Options::Induction::NONE) {
       result += std::string(",inD:") + Int::toString(_inference.inductionDepth());
     }
     result += ",thAx:" + Int::toString((int)(_inference.th_ancestors));
     result += ",allAx:" + Int::toString((int)(_inference.all_ancestors));
 
-    result += ",thDist:" + Int::toString( _inference.th_ancestors * env.options->theorySplitQueueExpectedRatioDenom() - _inference.all_ancestors);
+    result += ",thDist:" + Int::toString(_inference.th_ancestors * env.options->theorySplitQueueExpectedRatioDenom() - _inference.all_ancestors);
     result += std::string("}");
   }
 
@@ -434,7 +434,7 @@ std::string Clause::toString() const
  */
 VirtualIterator<std::string> Clause::toSimpleClauseStrings()
 {
-    return pvi(getSingletonIterator(literalsOnlyToString()));
+  return pvi(getSingletonIterator(literalsOnlyToString()));
 }
 
 /**
@@ -444,8 +444,8 @@ VirtualIterator<std::string> Clause::toSimpleClauseStrings()
 bool Clause::skip() const
 {
   unsigned clen = length();
-  for(unsigned i = 0; i < clen; i++) {
-    const Literal* lit = (*this)[i];
+  for (unsigned i = 0; i < clen; i++) {
+    const Literal *lit = (*this)[i];
     if (!lit->skip()) {
       return false;
     }
@@ -464,14 +464,14 @@ void Clause::computeColor() const
   Color color = COLOR_TRANSPARENT;
 
   if (env.colorUsed) {
-    unsigned clen=length();
-    for(unsigned i=0;i<clen;i++) {
+    unsigned clen = length();
+    for (unsigned i = 0; i < clen; i++) {
       color = static_cast<Color>(color | (*this)[i]->color());
     }
     ASS_L(color, COLOR_INVALID);
   }
 
-  _color=color;
+  _color = color;
 }
 
 /**
@@ -483,14 +483,13 @@ void Clause::computeColor() const
 unsigned Clause::computeWeight() const
 {
   unsigned result = 0;
-  for (int i = _length-1; i >= 0; i--) {
+  for (int i = _length - 1; i >= 0; i--) {
     ASS(_literals[i]->shared());
     result += _literals[i]->weight();
   }
 
   return result;
 } // Clause::computeWeight
-
 
 /**
  * Return weight of the split part of the clause
@@ -512,15 +511,16 @@ unsigned Clause::splitWeight() const
  * @author Andrei Voronkov
  */
 
-unsigned Clause::getNumeralWeight() const {
+unsigned Clause::getNumeralWeight() const
+{
   unsigned res = 0;
-  for (Literal* lit : iterLits()) {
+  for (Literal *lit : iterLits()) {
     if (!lit->hasInterpretedConstants()) {
       continue;
     }
     NonVariableIterator nvi(lit);
     while (nvi.hasNext()) {
-      const Term* t = nvi.next().term();
+      const Term *t = nvi.next().term();
       if (t->arity() != 0 || t->isSort()) {
         continue;
       }
@@ -539,7 +539,8 @@ unsigned Clause::getNumeralWeight() const {
 
       if (theory->tryInterpretConstant(t, ratVal)) {
         haveRat = true;
-      } else if (theory->tryInterpretConstant(t, realVal)) {
+      }
+      else if (theory->tryInterpretConstant(t, realVal)) {
         ratVal = RationalConstantType(realVal);
         haveRat = true;
       }
@@ -560,12 +561,13 @@ unsigned Clause::getNumeralWeight() const {
 /**
  * compute weight of the clause used by clause selection and cache it
  */
-unsigned Clause::computeWeightForClauseSelection(const Options& opt) const
+unsigned Clause::computeWeightForClauseSelection(const Options &opt) const
 {
   unsigned w = 0;
   if (_weight) {
     w = _weight;
-  } else {
+  }
+  else {
     w = computeWeight();
   }
 
@@ -577,21 +579,22 @@ unsigned Clause::computeWeightForClauseSelection(const Options& opt) const
   // hack: computation of getNumeralWeight is potentially expensive, so we only compute it if
   // the option increasedNumeralWeight is set to true.
   unsigned numeralWeight = 0;
-  if (opt.increasedNumeralWeight())
-  {
+  if (opt.increasedNumeralWeight()) {
     numeralWeight = getNumeralWeight();
   }
 
   bool derivedFromGoal = Unit::derivedFromGoal();
-  if(derivedFromGoal && opt.restrictNWCtoGC()){
+  if (derivedFromGoal && opt.restrictNWCtoGC()) {
     bool found = false;
-    for(unsigned i=0;i<_length;i++){
+    for (unsigned i = 0; i < _length; i++) {
       NonVariableNonTypeIterator it(_literals[i]);
-      while(it.hasNext()){
+      while (it.hasNext()) {
         found |= env.signature->getFunction(it.next()->functor())->inGoal();
       }
     }
-    if(!found){ derivedFromGoal=false; }
+    if (!found) {
+      derivedFromGoal = false;
+    }
   }
 
   return Clause::computeWeightForClauseSelection(w, splWeight, numeralWeight, derivedFromGoal, opt);
@@ -601,7 +604,7 @@ unsigned Clause::computeWeightForClauseSelection(const Options& opt) const
  * note: we currently assume in Clause::computeWeightForClauseSelection(opt) that numeralWeight is only used here if
  * the option increasedNumeralWeight() is set to true.
  */
-unsigned Clause::computeWeightForClauseSelection(unsigned w, unsigned splitWeight, unsigned numeralWeight, bool derivedFromGoal, const Shell::Options& opt)
+unsigned Clause::computeWeightForClauseSelection(unsigned w, unsigned splitWeight, unsigned numeralWeight, bool derivedFromGoal, const Shell::Options &opt)
 {
   static unsigned nongoalWeightCoeffNum = opt.nongoalWeightCoefficientNumerator();
   static unsigned nongoalWeightCoefDenom = opt.nongoalWeightCoefficientDenominator();
@@ -611,24 +614,23 @@ unsigned Clause::computeWeightForClauseSelection(unsigned w, unsigned splitWeigh
   if (opt.increasedNumeralWeight()) {
     w = (2 * w + numeralWeight);
   }
-  return w * ( !derivedFromGoal ? nongoalWeightCoeffNum : nongoalWeightCoefDenom);
+  return w * (!derivedFromGoal ? nongoalWeightCoeffNum : nongoalWeightCoefDenom);
 }
 
-
-void Clause::collectUnstableVars(DHSet<unsigned>& acc)
+void Clause::collectUnstableVars(DHSet<unsigned> &acc)
 {
   collectVars2<UnstableVarIt>(acc);
 }
 
-void Clause::collectVars(DHSet<unsigned>& acc)
+void Clause::collectVars(DHSet<unsigned> &acc)
 {
   collectVars2<VariableIterator>(acc);
 }
 
-template<class VarIt>
-void Clause::collectVars2(DHSet<unsigned>& acc)
+template <class VarIt>
+void Clause::collectVars2(DHSet<unsigned> &acc)
 {
-  for (Literal* lit : iterLits()) {
+  for (Literal *lit : iterLits()) {
     VarIt vit(lit);
     while (vit.hasNext()) {
       TermList var = vit.next();
@@ -661,11 +663,9 @@ unsigned Clause::maxVar()
 unsigned Clause::numPositiveLiterals()
 {
   unsigned count = 0;
-  for (int i = 0; i < _length; i++)
-  {
+  for (int i = 0; i < _length; i++) {
     Literal *lit = (*this)[i];
-    if (lit->isPositive())
-    {
+    if (lit->isPositive()) {
       count++;
     }
   }
@@ -677,37 +677,40 @@ unsigned Clause::numPositiveLiterals()
  *
  * @b lit has to be present in the clause
  */
-unsigned Clause::getLiteralPosition(Literal* lit)
+unsigned Clause::getLiteralPosition(Literal *lit)
 {
-  switch(length()) {
-  case 1:
-    ASS_EQ(lit,(*this)[0]);
-    return 0;
-  case 2:
-    if (lit==(*this)[0]) {
+  switch (length()) {
+    case 1:
+      ASS_EQ(lit, (*this)[0]);
       return 0;
-    } else {
-      ASS_EQ(lit,(*this)[1]);
-      return 1;
-    }
-  case 3:
-    if (lit==(*this)[0]) {
-      return 0;
-    } else if (lit==(*this)[1]) {
-      return 1;
-    } else {
-      ASS_EQ(lit,(*this)[2]);
-      return 2;
-    }
+    case 2:
+      if (lit == (*this)[0]) {
+        return 0;
+      }
+      else {
+        ASS_EQ(lit, (*this)[1]);
+        return 1;
+      }
+    case 3:
+      if (lit == (*this)[0]) {
+        return 0;
+      }
+      else if (lit == (*this)[1]) {
+        return 1;
+      }
+      else {
+        ASS_EQ(lit, (*this)[2]);
+        return 2;
+      }
 #if VDEBUG
-  case 0:
-    ASSERTION_VIOLATION;
+    case 0:
+      ASSERTION_VIOLATION;
 #endif
-  default:
-    if (!_literalPositions) {
-      _literalPositions=new InverseLookup<Literal>(_literals,length());
-    }
-    return static_cast<unsigned>(_literalPositions->get(lit));
+    default:
+      if (!_literalPositions) {
+        _literalPositions = new InverseLookup<Literal>(_literals, length());
+      }
+      return static_cast<unsigned>(_literalPositions->get(lit));
   }
 }
 
@@ -729,38 +732,44 @@ void Clause::assertValid()
 {
   ASS_ALLOC_TYPE(this, "Clause");
   if (_literalPositions) {
-    unsigned clen=length();
-    for (unsigned i = 0; i<clen; i++) {
-      ASS_EQ(getLiteralPosition((*this)[i]),i);
+    unsigned clen = length();
+    for (unsigned i = 0; i < clen; i++) {
+      ASS_EQ(getLiteralPosition((*this)[i]), i);
     }
   }
 }
 
 #endif
 
-bool Clause::contains(Literal* lit)
+bool Clause::contains(Literal *lit)
 {
-  for (int i = _length-1; i >= 0; i--) {
-    if (_literals[i]==lit) {
+  for (int i = _length - 1; i >= 0; i--) {
+    if (_literals[i] == lit) {
       return true;
     }
   }
   return false;
 }
 
-std::ostream& operator<<(std::ostream& out, Clause::Store const& store) 
+std::ostream &operator<<(std::ostream &out, Clause::Store const &store)
 {
   switch (store) {
-    case Clause::PASSIVE:     return out << "PASSIVE";
-    case Clause::ACTIVE:      return out << "ACTIVE";
-    case Clause::UNPROCESSED: return out << "UNPROCESSED";
-    case Clause::NONE:        return out << "NONE";
-    case Clause::SELECTED:    return out << "SELECTED";
+    case Clause::PASSIVE:
+      return out << "PASSIVE";
+    case Clause::ACTIVE:
+      return out << "ACTIVE";
+    case Clause::UNPROCESSED:
+      return out << "UNPROCESSED";
+    case Clause::NONE:
+      return out << "NONE";
+    case Clause::SELECTED:
+      return out << "SELECTED";
   }
   ASSERTION_VIOLATION;
 }
 
-Literal* Clause::getAnswerLiteral() {
+Literal *Clause::getAnswerLiteral()
+{
   for (unsigned i = 0; i < _length; ++i) {
     if (_literals[i]->isAnswerLiteral()) {
       return _literals[i];
@@ -769,7 +778,8 @@ Literal* Clause::getAnswerLiteral() {
   return nullptr;
 }
 
-bool Clause::computable() {
+bool Clause::computable()
+{
   for (unsigned i = 0; i < length(); ++i) {
     if ((*this)[i]->isAnswerLiteral()) {
       continue;
@@ -781,4 +791,4 @@ bool Clause::computable() {
   return true;
 }
 
-}
+} // namespace Kernel

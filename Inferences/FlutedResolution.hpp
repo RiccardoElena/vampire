@@ -57,10 +57,12 @@ private:
     LESSER = 0,
     GREATER = 1,
     EQUAL = 2,
-    UNCOMPARABLE = 3
+    INCOMPARABLE = 3
   };
 
   ComparisonResult compareLiterals(Literal *l1, Literal *l2);
+
+  ComparisonResult groundLitComparison(Term *l1, Term *l2);
 
   ComparisonResult superTermRelation(const TermList *t1, const TermList *t2);
 

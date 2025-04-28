@@ -125,6 +125,8 @@ using namespace Kernel;
 using namespace Shell;
 using namespace Saturation;
 
+#define FLUTED_DEBUG 0
+
 /** Print information changes in clause containers */
 #define REPORT_CONTAINERS 0
 /** Print information about performed forward simplifications */
@@ -1112,7 +1114,10 @@ void SaturationAlgorithm::removeSelected(Clause *cl)
 void SaturationAlgorithm::activate(Clause *cl)
 {
   TIME_TRACE("activation")
-
+// FIXME remove after test
+#if FLUTED_DEBUG
+  std::cout << "Activating " << cl->toString() << std::endl;
+#endif
   {
     TIME_TRACE("redundancy check")
     if (_consFinder && _consFinder->isRedundant(cl)) {
@@ -1122,7 +1127,7 @@ void SaturationAlgorithm::activate(Clause *cl)
 
   // IDEA: add separation here as splitting is done!
 
-  if (cl->inference().rule() != InferenceRule::SEPARATION) {
+  if (env.options->mode() == Options::Mode::FLUTED && cl->inference().rule() != InferenceRule::SEPARATION) {
     TIME_TRACE("separating")
     ClauseList::Iterator cit = FlutedFragment::Separator::separate(cl);
     if (cit.hasNext()) {

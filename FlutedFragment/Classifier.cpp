@@ -23,6 +23,9 @@ using namespace std;
  */
 bool Classifier::isInFlutedFragment(UnitList *ul)
 {
+  if (_debug) {
+    cout << "Checking if the unit list is in the Fluted Fragment " << ul << endl;
+  }
   if (ul->empty())
     return false;
 
@@ -48,6 +51,11 @@ bool ClauseClassifier::isInFlutedFragment(UnitList *ul)
     Unit *unit{uit.next()};
 
     if (!isFluted(unit->asClause())) {
+
+      cout << "Found a non fluted clause" << endl;
+
+      cout << "Unit: " << unit->toString() << endl;
+
       return false;
     }
   }
@@ -64,6 +72,12 @@ bool ClauseClassifier::isFluted(Clause *clause)
   }
 
   Literal *currentLit{lit.next()};
+  if (currentLit->isEquality()) {
+    if (_debug) {
+      cout << "Found an equality" << endl;
+    }
+    return false;
+  }
   if (!currentLit->allArgumentsAreVariables()) {
     if (_debug) {
       cout << "Found a functional literal" << endl;
@@ -76,13 +90,6 @@ bool ClauseClassifier::isFluted(Clause *clause)
   }
   else {
     lastVar.setNoVars();
-  }
-
-  if (currentLit->isEquality()) {
-    if (_debug) {
-      cout << "Found an equality" << endl;
-    }
-    return false;
   }
 
   while (lit.hasNext()) {
@@ -133,7 +140,7 @@ bool ClauseClassifier::isFL1Clause(Clause *clause)
     }
   }
 
-  return fl.isComplete();
+  return true;
 }
 
 bool ClauseClassifier::isFluted(Literal *literal, FlutedSequence &fl)
@@ -143,17 +150,35 @@ bool ClauseClassifier::isFluted(Literal *literal, FlutedSequence &fl)
   }
 
   VariableIterator litVars{literal};
+  EVar lastVar{};
 
   if (!litVars.hasNext()) {
     if (_debug) {
       cout << "Found a propositional variable" << endl;
     }
-    return false;
+    if (fl.isVarSet()) {
+      if (fl.isVarConst()) {
+        return true;
+      }
+
+      if (_debug) {
+        cout << "Found a constant ('sequence over 0'), but a variable was already found" << endl;
+      }
+
+      return false;
+    }
+    else {
+      fl.setNoVars();
+    }
+    return true;
   }
 
-  EVar lastVar = litVars.next().var();
+  lastVar = litVars.next().var();
 
   if (lastVar.var() == 0) {
+    if (_debug) {
+      cout << "is complete!" << endl;
+    }
     fl.setIsComplete();
   }
 
@@ -171,6 +196,9 @@ bool ClauseClassifier::isFluted(Literal *literal, FlutedSequence &fl)
   }
 
   if (lastVar != fl.var()) {
+    if (_debug) {
+      cout << "?" << endl;
+    }
     return false;
   }
 
@@ -195,7 +223,7 @@ bool ClauseClassifier::isFL2Clause(Clause *clause)
       return false;
     }
     if (currentLit->allArgumentsAreVariables()) {
-      if (localFl.isVarConst()) {
+      if (localFl.isVarConst() && currentLit->arity() != 0) {
         return false;
       }
       if (!isFluted(currentLit, localFl)) {
@@ -203,7 +231,6 @@ bool ClauseClassifier::isFL2Clause(Clause *clause)
       }
     }
     else {
-
       EVar v{};
       if (localFl.isVarSet()) {
         if (localFl.isVarConst()) {
@@ -216,7 +243,13 @@ bool ClauseClassifier::isFL2Clause(Clause *clause)
 
       FlutedSequence innerFl{isFluted(currentLit, v)};
 
-      if (!innerFl.isComplete() || !innerFl.isValid() || (localFl.isVarSet() && (innerFl.isVarConst() != localFl.isVarConst() || (!innerFl.isVarConst() && innerFl.var() != localFl.var())))) {
+      if (
+          //  !innerFl.isComplete() ||
+          !innerFl.isValid() ||
+          (localFl.isVarSet() &&
+           (innerFl.isVarConst() != localFl.isVarConst() ||
+            (!innerFl.isVarConst() && innerFl.var() != localFl.var())))) {
+
         return false;
       }
 
@@ -249,7 +282,7 @@ bool ClauseClassifier::isFL2Clause(Clause *clause)
 ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
 {
   if (_debug) {
-    cout << "Checking if " << term->toString() << " is fluted" << endl;
+    cout << "AChecking if " << term->toString() << " is fluted" << endl;
   }
 
   bool isFunctional{false};
@@ -266,6 +299,9 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
   }
 
   if (args->isVar()) {
+    if (_debug) {
+      cout << "BB" << endl;
+    }
     currVar = args->var();
 
     args = args->next();
@@ -288,9 +324,14 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
     }
   }
   else {
+    if (_debug) {
+      cout << "I'm functional" << endl;
+    }
     isFunctional = true;
     if (!args->term()->arity()) {
-
+      if (_debug) {
+        cout << "Constant!" << endl;
+      }
       if (v.isSet() && !v.isConst()) {
         if (_debug) {
           cout << "Found a constant ('sequence over 0'), but a variable was already found" << endl;
@@ -298,6 +339,9 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
         return false;
       }
       if (!v.isSet()) {
+        if (_debug) {
+          cout << "Constant!2" << endl;
+        }
         v.setNoVars();
       }
       localFl.addTerm(args->term());
@@ -323,6 +367,9 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
       }
 
       if ((currVar.isSet() && currVar != v) || localFl.isListMember(args->term())) {
+        if (_debug) {
+          cout << "BBFound 2 constant on the same level" << endl;
+        }
         return false;
       }
 
@@ -341,6 +388,9 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
         innerFl = isFluted(args->term(), v);
       }
       if (!innerFl.isValid()) {
+        if (_debug) {
+          cout << "invalid" << endl;
+        }
         return false;
       }
       if (innerFl.isComplete()) {
@@ -356,12 +406,16 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
       }
       if (!localFl.hasTermList()) {
         if (currVar.isSet() && innerFl.hasTermList()) {
+          if (_debug) {
+            cout << "currVar set and inner has term list" << endl;
+          }
           return false;
         }
         localFl.setTermList(innerFl.termList());
       }
       else {
         if (!localFl.hasAsSubfix(innerFl.termList())) {
+
           return false;
         }
         else {
@@ -372,7 +426,9 @@ ClauseClassifier::FlutedSequence ClauseClassifier::isFluted(Term *term, EVar v)
 
     args = args->next();
   }
-
+  if (_debug) {
+    cout << "Sono qua!" << endl;
+  }
   if (!v.isSet() && currVar.isSet()) {
     localFl.setVar(currVar);
   }

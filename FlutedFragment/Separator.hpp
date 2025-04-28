@@ -5,6 +5,8 @@
 #include "Kernel/Clause.hpp"
 #include "Kernel/Inference.hpp"
 #include "Classifier.hpp"
+
+#define SEPARATOR_DEBUG 0
 namespace FlutedFragment {
 
 using namespace Kernel;
@@ -15,62 +17,101 @@ public:
 
   using Evar = ClauseClassifier::EVar;
 
+  struct varRange {
+    Evar first;
+    Evar last;
+  };
+
   static ClauseList::Iterator separate(Clause *cl)
   {
 
+#if SEPARATOR_DEBUG
     std::cout << "Separating clause: " << cl->toString() << std::endl;
+#endif
     // Partition the literals of the clause into two sets C and D
     // Saving upper and lower bounds of the variables in C and D
     auto lit = cl->getLiteralIterator();
     auto currentLit = lit.next();
-    if (!currentLit->allArgumentsAreVariables()) {
-      std::cout << "Not separating because FL2" << std::endl;
+
+    if (!currentLit->arity()) {
+#if SEPARATOR_DEBUG
+      std::cout
+          << currentLit->toString() << " is ground, therefore his set of vars is always contained" << std::endl;
+#endif
       return ClauseList::Iterator(ClauseList::empty());
     }
-    LiteralStack sepResC, sepResD;
-    Evar vLastC = currentLit->nthArgument(currentLit->arity() - 1)->var(),
-         vFirstC = currentLit->nthArgument(0)->var(),
-         vLastD, vFirstD;
+
+    if (!currentLit->allArgumentsAreVariables()) {
+#if SEPARATOR_DEBUG
+      std::cout
+          << "Not separating because FL2" << std::endl;
+#endif
+      return ClauseList::Iterator(ClauseList::empty());
+    }
+    LiteralStack sepResC{}, sepResD{};
+    varRange varsC, varsD;
+    varsC.first = currentLit->nthArgument(0)->var();
+    varsC.last = currentLit->nthArgument(currentLit->arity() - 1)->var(),
     sepResC.push(currentLit);
     while (lit.hasNext()) {
       currentLit = lit.next();
+
+      if (!currentLit->arity()) {
+#if SEPARATOR_DEBUG
+        std::cout
+            << currentLit->toString() << " is ground, therefore his set of vars is always contained" << std::endl;
+#endif
+        return ClauseList::Iterator(ClauseList::empty());
+      }
+
       if (!currentLit->allArgumentsAreVariables()) {
         return ClauseList::Iterator(ClauseList::empty());
       }
-      Evar currVLast = currentLit->nthArgument(currentLit->arity() - 1)->var(), currVFirst = currentLit->nthArgument(0)->var();
-      if (currVLast == vLastC) {
+
+      Evar currVLast = currentLit->nthArgument(currentLit->arity() - 1)->var(),
+           currVFirst = currentLit->nthArgument(0)->var();
+
+      if (currVLast == varsC.last) {
         sepResC.push(currentLit);
-        if (vFirstC > currVFirst) {
-          vFirstC = currVFirst;
+        if (varsC.first > currVFirst) {
+          varsC.first = currVFirst;
         }
       }
       else {
-        if (sepResD.isEmpty() || vFirstD > currVFirst) {
-          if (sepResD.isEmpty()) {
-            vLastD = currVLast;
-          }
-          vFirstD = currVFirst;
+        if (sepResD.isEmpty()) {
+          varsD.last = currVLast;
+          varsD.first = currVFirst;
+        }
+        if (varsD.first > currVFirst) {
+          varsD.first = currVFirst;
         }
         sepResD.push(currentLit);
       }
     }
 
-    if (!vLastD.isSet()) {
+    if (!varsD.last.isSet()) {
+#if SEPARATOR_DEBUG
       std::cout << "Not separating because FL1" << std::endl;
+#endif
       return ClauseList::Iterator(ClauseList::empty());
     }
 
-    // TODO: check that set with smaller last variable has to contain 0
-    // IDEA: prob best way to check all of this and simplify the code
-    // IDEA: is to assume C is the set with the smaller last variable
-    // IDEA: and to edit bounds of C and D accordingly
-    if (vFirstC != 0 && vFirstD != 0) {
-      assertionViolation<string>();
+    if (varsC.last.var() > varsD.last.var()) {
+      std::swap(varsC, varsD);
+      auto temp = sepResC;
+      sepResC = sepResD;
+      sepResD = temp;
+    }
+
+    if (varsC.first != 0) {
+#if SEPARATOR_DEBUG
+      std::cout << "Not separating because not Fluted" << std::endl;
+#endif
+      return ClauseList::Iterator(ClauseList::empty());
     }
 
     // Check applicability of separation based on which set contains the Xm+1 variable
-    return (vLastC.var() < vLastD.var()) ? createClauses(vFirstC.var(), vFirstD.var(), vLastC.var(), sepResC, sepResD, cl)
-                                         : createClauses(vFirstD.var(), vFirstC.var(), vLastD.var(), sepResD, sepResC, cl);
+    return createClauses(varsD.first.var(), varsC.last.var(), sepResC, sepResD, cl);
   }
 
   /*
@@ -79,11 +120,16 @@ public:
     then var(D) contains var(C), therefore separation is not applicable.
     Otherwise, the clause is separated into two clauses.
   */
-  static ClauseList::Iterator createClauses(unsigned vCf, unsigned vDf, unsigned vCl, LiteralStack &sepResC, LiteralStack &sepResD, Clause *cl)
+  static ClauseList::Iterator createClauses(unsigned vDf, unsigned vCl, LiteralStack &sepResC, LiteralStack &sepResD, Clause *cl)
   {
+
+#if SEPARATOR_DEBUG
     std::cout << "Creating clauses" << std::endl;
-    if (vDf <= vCf) {
+#endif
+    if (vDf == 0) {
+#if SEPARATOR_DEBUG
       std::cout << "Not separating because one set of var contains the other" << std::endl;
+#endif
       return ClauseList::Iterator(ClauseList::empty());
     }
     ClauseList *res = ClauseList::empty();
@@ -102,9 +148,11 @@ public:
 
     Clause *clC = Clause::fromStack(sepResC, NonspecificInference1(InferenceRule::SEPARATION, cl));
     Clause *clD = Clause::fromStack(sepResD, NonspecificInference1(InferenceRule::SEPARATION, cl));
+#if SEPARATOR_DEBUG
     std::cout << "Separated clauses: " << clC->toString() << " and " << clD->toString() << std::endl;
-    ClauseList::push(clC, res);
+#endif
     ClauseList::push(clD, res);
+    ClauseList::push(clC, res);
 
     return ClauseList::Iterator(res);
   }

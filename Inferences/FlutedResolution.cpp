@@ -45,6 +45,8 @@
 
 #include "FlutedResolution.hpp"
 
+#define FLUTED_RESOLUTION_DEBUG 0
+
 namespace Inferences {
 
 using namespace std;
@@ -80,6 +82,11 @@ Clause *FlutedResolution::generateClause(
     ResultSubstitutionSP subs, AbstractingUnifier *absUnif)
 {
   ASS(resultCl->store() == Clause::ACTIVE); // Added to check that generation only uses active clauses
+
+#if FLUTED_RESOLUTION_DEBUG
+  std::cout << "Resolving " << queryLit->toString() << " from " << queryCl->toString()
+            << " with " << resultLit->toString() << " from " << resultCl->toString() << std::endl;
+#endif
 
   const auto &opts = getOptions();
   const bool afterCheck = getOptions().literalMaximalityAftercheck() && _salg->getLiteralSelector().isBGComplete();
@@ -252,7 +259,10 @@ ClauseIterator FlutedResolution::generateClauses(Clause *premise)
                              premise->getSelectedLiteralIterator()
                                  .filter([this, premise](auto l) { return isEligibleLiteral(l, premise); })
                                  .flatMap([this, premise](auto lit) {
-                                   // find query results for literal `lit`
+// find query results for literal `lit`
+#if FLUTED_RESOLUTION_DEBUG
+                                   cout << "Resolving " << lit->toString() << " from " << premise->toString() << endl;
+#endif
                                    return iterTraits(_index->getUwa(lit, /* complementary */ true,
                                                                     env.options->unificationWithAbstraction(),
                                                                     env.options->unificationWithAbstractionFixedPointIteration()))
@@ -268,8 +278,9 @@ ClauseIterator FlutedResolution::generateClauses(Clause *premise)
 
 bool FlutedResolution::isEligibleLiteral(Literal *l, Clause *cl)
 {
-  // ? what does it mean to be *strictly* maximal?
-  return isMaximal(l, cl, l->isPositive());
+  return isMaximal(l, cl,
+                   // l->isPositive()
+                   false);
 }
 
 bool FlutedResolution::isMaximal(Literal *l, Clause *cl, bool strict)
@@ -278,6 +289,24 @@ bool FlutedResolution::isMaximal(Literal *l, Clause *cl, bool strict)
   auto ord = cl->_flutedOrdering.find(l);
 
   if (ord.isSome()) {
+#if FLUTED_RESOLUTION_DEBUG
+    cout << "Literal " << l->toString() << " in clause " << cl->toString() << " is ";
+    switch (ord.unwrap()) {
+      case Clause::FlutedOrdering::STRICTLY_MAXIMAL:
+        cout << "strictly maximal";
+        break;
+      case Clause::FlutedOrdering::MAXIMAL:
+        cout << "maximal";
+        break;
+      case Clause::FlutedOrdering::NON_MAXIMAL:
+        cout << "non-maximal";
+        break;
+      default:
+        cout << "incomparable";
+        break;
+    }
+    cout << " returning " << (ord.unwrap() < (1 + !strict)) << endl;
+#endif
     return ord.unwrap() < (1 + !strict);
   }
 
@@ -286,7 +315,7 @@ bool FlutedResolution::isMaximal(Literal *l, Clause *cl, bool strict)
   LiteralList *lEquivalents = 0;
   while (lit.hasNext()) {
     auto curr = lit.next();
-    // if current literal is already marked as maximal but l is not, then they are uncomparable
+    // if current literal is already marked as maximal but l is not, then they are incomparable
     if (curr == l || ((ord = cl->_flutedOrdering.find(curr)).isSome() && ord.unwrap() < 2)) {
       continue;
     }
@@ -333,7 +362,7 @@ bool FlutedResolution::isMaximal(Literal *l, Clause *cl, bool strict)
   * - LESSER if l1 is strictly less than l2
   * - GREATER if l1 is strictly greater than l2
   * - EQUAL if l1 is equal to l2
-  * - UNCOMPARABLE if l1 and l2 are Uncomparable
+  * - INCOMPARABLE if l1 and l2 are incomparable
 
   * The comparison is lexicographic on the following properties:
   * 1. Arity
@@ -342,90 +371,129 @@ bool FlutedResolution::isMaximal(Literal *l, Clause *cl, bool strict)
 
   * To be admisible, the ordering must be total and well-founded on ground literals.
   * Being (2) the only measure of complexity that can violate the totality of the ordering
-  * it will be substituted with functor comparison in case of uncomparability.
+  * it will be substituted with functor comparison in case of incomparability.
 
-  * If only one of the term is ground, (2) is considered always uncomparable.
+  * If only one of the term is ground, (2) is considered always incomparable.
 
 */
 
 FlutedResolution::ComparisonResult FlutedResolution::compareLiterals(Literal *l1, Literal *l2)
 {
-  // Technically this should never happen, but it's a good sanity check
+// Technically this should never happen, but it's a good sanity check
+#if FLUTED_RESOLUTION_DEBUG
+  cout << "Comparing " << l1->toString() << " with " << l2->toString() << endl;
+#endif
+
   if (l1 == l2) {
-    return ComparisonResult::UNCOMPARABLE;
+    return ComparisonResult::EQUAL;
   }
 
   if (l1->arity() != l2->arity()) {
+#if FLUTED_RESOLUTION_DEBUG
+    cout << l1->toString() << (l1->arity() < l2->arity() ? " < " : " > ") << l2->toString() << " [arity]" << endl;
+#endif
     return l1->arity() < l2->arity() ? ComparisonResult::LESSER : ComparisonResult::GREATER;
   }
 
+  // ??
+  if (!l1->arity()) {
+    return l1->functor() == l2->functor() ? l1->isNegative() ? ComparisonResult::GREATER : ComparisonResult::LESSER
+        : l1->functor() < l2->functor()   ? ComparisonResult::LESSER
+                                          : ComparisonResult::GREATER;
+  }
+
   if (l1->ground() != l2->ground()) {
-    return ComparisonResult::UNCOMPARABLE;
+#if FLUTED_RESOLUTION_DEBUG
+    cout << l1->toString() << " ? " << l2->toString() << endl;
+#endif
+    return ComparisonResult::INCOMPARABLE;
   }
 
   auto t1 = l1->nthArgument(l1->arity() - 1);
   auto t2 = l2->nthArgument(l2->arity() - 1);
 
   /**
-   *! All variables are equally uncomparable, but choosing the last variable assure
+   *! All variables are equally incomparable, but choosing the last variable assure
    *! it's contained in all the other terms
    */
+  if (t1->isVar() && t2->isVar()) {
+#if FLUTED_RESOLUTION_DEBUG
+    cout << l1->toString() << " ? " << l2->toString() << endl;
+#endif
+    return ComparisonResult::INCOMPARABLE;
+  }
 
   if (t1->isVar() != t2->isVar()) {
+#if FLUTED_RESOLUTION_DEBUG
+    cout << l1->toString() << (t1->isVar() ? " < " : " > ") << l2->toString() << endl;
+#endif
     return t1->isVar() ? ComparisonResult::LESSER : ComparisonResult::GREATER;
   }
 
   if (!t1->isVar() && !t2->isVar()) {
     // superterm relation
-    if (superTermRelation(t1, t2) != ComparisonResult::EQUAL) {
-      return superTermRelation(t1, t2);
+    ComparisonResult res = superTermRelation(t1, t2);
+    if (res == ComparisonResult::INCOMPARABLE && l1->ground()) {
+      res = l1->functor() == l2->functor() ? groundLitComparison(l1, l2) : l1->functor() < l2->functor() ? ComparisonResult::LESSER
+                                                                                                         : ComparisonResult::GREATER;
+    }
+    if (res != ComparisonResult::EQUAL) {
+#if FLUTED_RESOLUTION_DEBUG
+      cout << l1->toString() << (res == ComparisonResult::LESSER ? " < " : res == ComparisonResult::GREATER ? " > "
+                                                                                                            : " ? ")
+           << l2->toString() << endl;
+#endif
+      return res;
     }
   }
 
-  // Non arriverò mai qui. A meno di non ammettere <_s come un ordine largo (nonostante il paper parli si *proper* superterm)
-
   if (l1->isNegative() != l2->isNegative()) {
+#if FLUTED_RESOLUTION_DEBUG
+    cout << l1->toString() << (l1->isNegative() ? " < " : " > ") << l2->toString() << endl;
+#endif
     return l1->isNegative() ? ComparisonResult::GREATER : ComparisonResult::LESSER;
   }
 
-  return ComparisonResult::UNCOMPARABLE;
+#if FLUTED_RESOLUTION_DEBUG
+  cout << l1->toString() << " = " << l2->toString() << endl;
+#endif
+  // return ComparisonResult::EQUAL;
+  return l1 > l2 ? ComparisonResult::GREATER : ComparisonResult::LESSER;
 }
 
-FlutedResolution::ComparisonResult FlutedResolution::superTermRelation(const TermList *t1, const TermList *t2)
+FlutedResolution::ComparisonResult FlutedResolution::groundLitComparison(Kernel::Term *t1, Kernel::Term *t2)
 {
-  //! Temporary considering the non strict superterm relation
-  if (t1 == t2) {
-    return ComparisonResult::EQUAL;
-  }
-
-  // If both are variables, they are uncomparable
-  if (t1->isVar() && t2->isVar()) {
-    return ComparisonResult::UNCOMPARABLE;
-  }
-
-  // If one is a variable and the other is not, the non-variable is the superterm
-  // This is assured by the fact we choose the last variable in compareLiterals
-  if (t1->isVar() != t2->isVar()) {
-    return t1->isVar() ? ComparisonResult::LESSER : ComparisonResult::GREATER;
-  }
-
-  if (isContained(t1, t2->term()->nthArgument(t2->term()->arity() - 1))) {
+  unsigned f1 = t1->functor(), f2 = t2->functor(), a1 = t1->arity(), a2 = t2->arity();
+  if (f1 < f2) {
     return ComparisonResult::LESSER;
   }
-
-  if (isContained(t2, t1->term()->nthArgument(t1->term()->arity() - 1))) {
+  if (f1 > f2) {
     return ComparisonResult::GREATER;
   }
 
-  if (t1->ground()) {
-    unsigned f1 = t1->term()->functor(), f2 = t2->term()->functor();
-    return f1 > f2 ? ComparisonResult::GREATER : f1 == f2 ? ComparisonResult::EQUAL
-                                                          : ComparisonResult::LESSER;
-  }
-  return ComparisonResult::UNCOMPARABLE;
+  return a1 ? groundLitComparison(t1->nthArgument(a1 - 1)->term(), t2->nthArgument(a2 - 1)->term()) : ComparisonResult::EQUAL;
 }
 
-/** Assuming Non variable terms.
+// this function assumes that t1 and t2 are not variables
+FlutedResolution::ComparisonResult FlutedResolution::superTermRelation(const TermList *t1, const TermList *t2)
+{
+
+  if (t1->term() == t2->term()) {
+    return ComparisonResult::EQUAL;
+  }
+
+  if (t2->term()->arity() || isContained(t1, t2->term()->nthArgument(t2->term()->arity() - 1))) {
+    return ComparisonResult::LESSER;
+  }
+
+  if (t1->term()->arity() || isContained(t2, t1->term()->nthArgument(t1->term()->arity() - 1))) {
+    return ComparisonResult::GREATER;
+  }
+
+  return ComparisonResult::INCOMPARABLE;
+}
+
+/** Assuming t1 is not a variable.
  * Check if t1 is contained in t2
  */
 /**

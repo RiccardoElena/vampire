@@ -1,0 +1,1466 @@
+[
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Debug/Assertion.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/Assertion.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/Assertion.cpp",
+  "output": "CMakeFiles/obj.dir/Debug/Assertion.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Debug/RuntimeStatistics.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/RuntimeStatistics.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/RuntimeStatistics.cpp",
+  "output": "CMakeFiles/obj.dir/Debug/RuntimeStatistics.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Debug/Tracer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/Tracer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/Tracer.cpp",
+  "output": "CMakeFiles/obj.dir/Debug/Tracer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Allocator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Allocator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Allocator.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Allocator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/DHMap.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/DHMap.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/DHMap.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/DHMap.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Environment.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Environment.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Environment.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Environment.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Event.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Event.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Event.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Event.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Exception.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Exception.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Exception.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Exception.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Int.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Int.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Int.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Int.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/IntNameTable.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/IntNameTable.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/IntNameTable.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/IntNameTable.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/IntUnionFind.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/IntUnionFind.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/IntUnionFind.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/IntUnionFind.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/NameArray.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/NameArray.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/NameArray.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/NameArray.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Random.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Random.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Random.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Random.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/StringUtils.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/StringUtils.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/StringUtils.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/StringUtils.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/System.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/System.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/System.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/System.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Timer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Timer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Timer.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Timer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Lib/Sys/Multiprocessing.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Sys/Multiprocessing.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Lib/Sys/Multiprocessing.cpp",
+  "output": "CMakeFiles/obj.dir/Lib/Sys/Multiprocessing.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Clause.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Clause.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Clause.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Clause.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/ClauseQueue.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ClauseQueue.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ClauseQueue.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/ClauseQueue.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/ColorHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ColorHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ColorHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/ColorHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/ELiteralSelector.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ELiteralSelector.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ELiteralSelector.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/ELiteralSelector.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/EqHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/EqHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/EqHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/EqHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/FlatTerm.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FlatTerm.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FlatTerm.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/FlatTerm.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Formula.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Formula.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Formula.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Formula.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/FormulaTransformer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FormulaTransformer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FormulaTransformer.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/FormulaTransformer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/FormulaUnit.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FormulaUnit.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FormulaUnit.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/FormulaUnit.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/FormulaVarIterator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FormulaVarIterator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/FormulaVarIterator.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/FormulaVarIterator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Grounder.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Grounder.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Grounder.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Grounder.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Inference.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Inference.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Inference.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Inference.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/InferenceStore.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/InferenceStore.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/InferenceStore.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/InferenceStore.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/InterpretedLiteralEvaluator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/InterpretedLiteralEvaluator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/InterpretedLiteralEvaluator.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/InterpretedLiteralEvaluator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Rebalancing.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Rebalancing.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Rebalancing.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Rebalancing.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/KBO.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/KBO.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/KBO.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/KBO.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/KBOComparator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/KBOComparator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/KBOComparator.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/KBOComparator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/LiteralSelector.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LiteralSelector.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LiteralSelector.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/LiteralSelector.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/LookaheadLiteralSelector.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LookaheadLiteralSelector.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LookaheadLiteralSelector.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/LookaheadLiteralSelector.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/MainLoop.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MainLoop.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MainLoop.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/MainLoop.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Matcher.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Matcher.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Matcher.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Matcher.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/MaximalLiteralSelector.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MaximalLiteralSelector.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MaximalLiteralSelector.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/MaximalLiteralSelector.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/MLMatcher.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MLMatcher.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MLMatcher.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/MLMatcher.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/MLMatcherSD.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MLMatcherSD.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MLMatcherSD.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/MLMatcherSD.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/MLVariant.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MLVariant.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/MLVariant.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/MLVariant.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Ordering.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Ordering.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Ordering.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Ordering.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Ordering_Equality.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Ordering_Equality.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Ordering_Equality.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Ordering_Equality.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Problem.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Problem.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Problem.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Problem.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Renaming.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Renaming.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Renaming.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Renaming.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/RobSubstitution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/RobSubstitution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/RobSubstitution.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/RobSubstitution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/UnificationWithAbstraction.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/UnificationWithAbstraction.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/UnificationWithAbstraction.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/UnificationWithAbstraction.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Signature.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Signature.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Signature.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Signature.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/SortHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SortHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SortHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/SortHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/OperatorType.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/OperatorType.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/OperatorType.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/OperatorType.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/SpassLiteralSelector.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SpassLiteralSelector.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SpassLiteralSelector.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/SpassLiteralSelector.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/RndLiteralSelector.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/RndLiteralSelector.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/RndLiteralSelector.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/RndLiteralSelector.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/SubformulaIterator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SubformulaIterator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SubformulaIterator.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/SubformulaIterator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Substitution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Substitution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Substitution.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Substitution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Term.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Term.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Term.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Term.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/TermIterators.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/TermIterators.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/TermIterators.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/TermIterators.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/TermTransformer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/TermTransformer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/TermTransformer.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/TermTransformer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Theory.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Theory.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Theory.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Theory.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Unit.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Unit.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Unit.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Unit.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/LPO.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LPO.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LPO.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/LPO.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/LPOComparator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LPOComparator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/LPOComparator.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/LPOComparator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Polynomial.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Polynomial.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Polynomial.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Polynomial.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/PolynomialNormalizer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/PolynomialNormalizer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/PolynomialNormalizer.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/PolynomialNormalizer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/ApplicativeHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ApplicativeHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/ApplicativeHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/ApplicativeHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/SKIKBO.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SKIKBO.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/SKIKBO.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/SKIKBO.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/CNFOnTheFly.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CNFOnTheFly.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CNFOnTheFly.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/CNFOnTheFly.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/CombinatorDemodISE.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CombinatorDemodISE.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CombinatorDemodISE.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/CombinatorDemodISE.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/CombinatorNormalisationISE.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CombinatorNormalisationISE.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CombinatorNormalisationISE.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/CombinatorNormalisationISE.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ArgCong.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ArgCong.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ArgCong.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ArgCong.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/NegativeExt.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/NegativeExt.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/NegativeExt.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/NegativeExt.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Narrow.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Narrow.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Narrow.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Narrow.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/SubVarSup.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/SubVarSup.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/SubVarSup.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/SubVarSup.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/BoolEqToDiseq.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BoolEqToDiseq.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BoolEqToDiseq.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/BoolEqToDiseq.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/PrimitiveInstantiation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/PrimitiveInstantiation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/PrimitiveInstantiation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/PrimitiveInstantiation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ElimLeibniz.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ElimLeibniz.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ElimLeibniz.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ElimLeibniz.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Choice.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Choice.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Choice.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Choice.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Injectivity.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Injectivity.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Injectivity.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Injectivity.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/BoolSimp.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BoolSimp.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BoolSimp.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/BoolSimp.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/CasesSimp.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CasesSimp.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CasesSimp.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/CasesSimp.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Cases.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Cases.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Cases.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Cases.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ProofExtra.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ProofExtra.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ProofExtra.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ProofExtra.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/LambdaElimination.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LambdaElimination.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LambdaElimination.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/LambdaElimination.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/AcyclicityIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/AcyclicityIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/AcyclicityIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/AcyclicityIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/ClauseCodeTree.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/ClauseCodeTree.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/ClauseCodeTree.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/ClauseCodeTree.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/ClauseVariantIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/ClauseVariantIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/ClauseVariantIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/ClauseVariantIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/CodeTree.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/CodeTree.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/CodeTree.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/CodeTree.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/CodeTreeInterfaces.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/CodeTreeInterfaces.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/CodeTreeInterfaces.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/CodeTreeInterfaces.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/GroundingIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/GroundingIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/GroundingIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/GroundingIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/Index.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/Index.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/Index.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/Index.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/IndexManager.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/IndexManager.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/IndexManager.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/IndexManager.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/InductionFormulaIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/InductionFormulaIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/InductionFormulaIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/InductionFormulaIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/LiteralIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/LiteralIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/LiteralIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/LiteralIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/LiteralMiniIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/LiteralMiniIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/LiteralMiniIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/LiteralMiniIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/ResultSubstitution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/ResultSubstitution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/ResultSubstitution.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/ResultSubstitution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/TermCodeTree.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/TermCodeTree.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/TermCodeTree.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/TermCodeTree.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/TermIndex.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/TermIndex.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/TermIndex.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/TermIndex.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Indexing/TermSharing.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/TermSharing.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Indexing/TermSharing.cpp",
+  "output": "CMakeFiles/obj.dir/Indexing/TermSharing.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/BackwardDemodulation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BackwardDemodulation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BackwardDemodulation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/BackwardDemodulation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/BackwardSubsumptionDemodulation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BackwardSubsumptionDemodulation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BackwardSubsumptionDemodulation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/BackwardSubsumptionDemodulation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/BackwardSubsumptionAndResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BackwardSubsumptionAndResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BackwardSubsumptionAndResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/BackwardSubsumptionAndResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/BinaryResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BinaryResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/BinaryResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/BinaryResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/CodeTreeForwardSubsumptionAndResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CodeTreeForwardSubsumptionAndResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/CodeTreeForwardSubsumptionAndResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/CodeTreeForwardSubsumptionAndResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Condensation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Condensation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Condensation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Condensation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/DemodulationHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/DemodulationHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/DemodulationHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/DemodulationHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/DistinctEqualitySimplifier.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/DistinctEqualitySimplifier.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/DistinctEqualitySimplifier.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/DistinctEqualitySimplifier.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/EqualityFactoring.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/EqualityFactoring.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/EqualityFactoring.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/EqualityFactoring.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/EqualityResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/EqualityResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/EqualityResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/EqualityResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ExtensionalityResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ExtensionalityResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ExtensionalityResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ExtensionalityResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Factoring.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Factoring.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Factoring.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Factoring.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/FastCondensation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FastCondensation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FastCondensation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/FastCondensation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/FOOLParamodulation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FOOLParamodulation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FOOLParamodulation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/FOOLParamodulation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ForwardDemodulation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardDemodulation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardDemodulation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ForwardDemodulation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ForwardLiteralRewriting.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardLiteralRewriting.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardLiteralRewriting.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ForwardLiteralRewriting.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ForwardSubsumptionAndResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardSubsumptionAndResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardSubsumptionAndResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ForwardSubsumptionAndResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ForwardSubsumptionDemodulation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardSubsumptionDemodulation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ForwardSubsumptionDemodulation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ForwardSubsumptionDemodulation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/FunctionDefinitionRewriting.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FunctionDefinitionRewriting.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FunctionDefinitionRewriting.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/FunctionDefinitionRewriting.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/GlobalSubsumption.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/GlobalSubsumption.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/GlobalSubsumption.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/GlobalSubsumption.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/InnerRewriting.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InnerRewriting.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InnerRewriting.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/InnerRewriting.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/EquationalTautologyRemoval.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/EquationalTautologyRemoval.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/EquationalTautologyRemoval.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/EquationalTautologyRemoval.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Induction.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Induction.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Induction.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Induction.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/InductionHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InductionHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InductionHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/InductionHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/InferenceEngine.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InferenceEngine.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InferenceEngine.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/InferenceEngine.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Instantiation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Instantiation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Instantiation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Instantiation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/InterpretedEvaluation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InterpretedEvaluation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InterpretedEvaluation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/InterpretedEvaluation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/InvalidAnswerLiteralRemovals.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InvalidAnswerLiteralRemovals.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/InvalidAnswerLiteralRemovals.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/InvalidAnswerLiteralRemovals.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/PushUnaryMinus.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/PushUnaryMinus.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/PushUnaryMinus.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/PushUnaryMinus.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Cancellation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Cancellation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Cancellation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Cancellation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/ArithmeticSubtermGeneralization.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ArithmeticSubtermGeneralization.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/ArithmeticSubtermGeneralization.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/ArithmeticSubtermGeneralization.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/NumTraits.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/NumTraits.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/NumTraits.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/NumTraits.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/GaussianVariableElimination.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/GaussianVariableElimination.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/GaussianVariableElimination.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/GaussianVariableElimination.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Kernel/Rebalancing/Inverters.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Rebalancing/Inverters.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Kernel/Rebalancing/Inverters.cpp",
+  "output": "CMakeFiles/obj.dir/Kernel/Rebalancing/Inverters.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/Superposition.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Superposition.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/Superposition.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/Superposition.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/TautologyDeletionISE.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/TautologyDeletionISE.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/TautologyDeletionISE.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/TautologyDeletionISE.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/TermAlgebraReasoning.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/TermAlgebraReasoning.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/TermAlgebraReasoning.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/TermAlgebraReasoning.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/URResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/URResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/URResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/URResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/DefinitionIntroduction.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/DefinitionIntroduction.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/DefinitionIntroduction.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/DefinitionIntroduction.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/SubsumptionDemodulationHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/SubsumptionDemodulationHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/SubsumptionDemodulationHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/SubsumptionDemodulationHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/TheoryInstAndSimp.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/TheoryInstAndSimp.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/TheoryInstAndSimp.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/TheoryInstAndSimp.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/PolynomialEvaluation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/PolynomialEvaluation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/PolynomialEvaluation.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/PolynomialEvaluation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/BufferedSolver.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/BufferedSolver.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/BufferedSolver.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/BufferedSolver.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/FallbackSolverWrapper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/FallbackSolverWrapper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/FallbackSolverWrapper.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/FallbackSolverWrapper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/MinimizingSolver.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/MinimizingSolver.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/MinimizingSolver.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/MinimizingSolver.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/SAT2FO.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SAT2FO.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SAT2FO.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/SAT2FO.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/SATClause.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SATClause.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SATClause.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/SATClause.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/SATInference.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SATInference.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SATInference.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/SATInference.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/SATLiteral.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SATLiteral.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/SATLiteral.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/SATLiteral.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/Z3Interfacing.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/Z3Interfacing.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/Z3Interfacing.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/Z3Interfacing.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/DP/ShortConflictMetaDP.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/DP/ShortConflictMetaDP.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/DP/ShortConflictMetaDP.cpp",
+  "output": "CMakeFiles/obj.dir/DP/ShortConflictMetaDP.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/DP/SimpleCongruenceClosure.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/DP/SimpleCongruenceClosure.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/DP/SimpleCongruenceClosure.cpp",
+  "output": "CMakeFiles/obj.dir/DP/SimpleCongruenceClosure.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/AWPassiveClauseContainer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/AWPassiveClauseContainer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/AWPassiveClauseContainer.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/AWPassiveClauseContainer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/ManCSPassiveClauseContainer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ManCSPassiveClauseContainer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ManCSPassiveClauseContainer.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/ManCSPassiveClauseContainer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/ClauseContainer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ClauseContainer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ClauseContainer.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/ClauseContainer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/ConsequenceFinder.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ConsequenceFinder.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ConsequenceFinder.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/ConsequenceFinder.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/Discount.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/Discount.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/Discount.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/Discount.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/ExtensionalityClauseContainer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ExtensionalityClauseContainer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ExtensionalityClauseContainer.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/ExtensionalityClauseContainer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/LabelFinder.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/LabelFinder.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/LabelFinder.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/LabelFinder.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/LRS.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/LRS.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/LRS.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/LRS.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/Otter.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/Otter.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/Otter.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/Otter.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/ProvingHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ProvingHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/ProvingHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/ProvingHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/SaturationAlgorithm.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/SaturationAlgorithm.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/SaturationAlgorithm.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/SaturationAlgorithm.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/Splitter.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/Splitter.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/Splitter.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/Splitter.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/SymElOutput.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/SymElOutput.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/SymElOutput.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/SymElOutput.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Saturation/PredicateSplitPassiveClauseContainer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/PredicateSplitPassiveClauseContainer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Saturation/PredicateSplitPassiveClauseContainer.cpp",
+  "output": "CMakeFiles/obj.dir/Saturation/PredicateSplitPassiveClauseContainer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/AnswerLiteralManager.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/AnswerLiteralManager.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/AnswerLiteralManager.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/AnswerLiteralManager.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/CommandLine.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/CommandLine.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/CommandLine.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/CommandLine.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/ConditionalRedundancyHandler.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/ConditionalRedundancyHandler.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/ConditionalRedundancyHandler.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/ConditionalRedundancyHandler.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/CNF.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/CNF.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/CNF.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/CNF.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/NewCNF.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/NewCNF.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/NewCNF.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/NewCNF.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/DistinctProcessor.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/DistinctProcessor.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/DistinctProcessor.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/DistinctProcessor.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/DistinctGroupExpansion.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/DistinctGroupExpansion.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/DistinctGroupExpansion.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/DistinctGroupExpansion.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/EqResWithDeletion.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/EqResWithDeletion.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/EqResWithDeletion.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/EqResWithDeletion.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/EqualityProxy.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/EqualityProxy.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/EqualityProxy.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/EqualityProxy.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/EqualityProxyMono.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/EqualityProxyMono.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/EqualityProxyMono.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/EqualityProxyMono.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Flattening.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Flattening.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Flattening.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Flattening.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/FunctionDefinition.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/FunctionDefinition.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/FunctionDefinition.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/FunctionDefinition.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/GeneralSplitting.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/GeneralSplitting.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/GeneralSplitting.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/GeneralSplitting.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/GoalGuessing.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/GoalGuessing.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/GoalGuessing.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/GoalGuessing.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/FunctionDefinitionHandler.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/FunctionDefinitionHandler.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/FunctionDefinitionHandler.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/FunctionDefinitionHandler.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/InequalitySplitting.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/InequalitySplitting.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/InequalitySplitting.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/InequalitySplitting.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/InterpolantMinimizer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/InterpolantMinimizer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/InterpolantMinimizer.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/InterpolantMinimizer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Interpolants.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Interpolants.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Interpolants.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Interpolants.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/InterpretedNormalizer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/InterpretedNormalizer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/InterpretedNormalizer.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/InterpretedNormalizer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/LaTeX.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LaTeX.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LaTeX.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/LaTeX.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Lexer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Lexer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Lexer.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Lexer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/LispLexer.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LispLexer.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LispLexer.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/LispLexer.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/LispParser.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LispParser.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/LispParser.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/LispParser.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Naming.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Naming.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Naming.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Naming.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/NNF.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/NNF.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/NNF.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/NNF.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Normalisation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Normalisation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Normalisation.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Normalisation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Shuffling.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Shuffling.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Shuffling.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Shuffling.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Options.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Options.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Options.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Options.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/PredicateDefinition.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/PredicateDefinition.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/PredicateDefinition.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/PredicateDefinition.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Preprocess.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Preprocess.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Preprocess.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Preprocess.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Property.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Property.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Property.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Property.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Rectify.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Rectify.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Rectify.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Rectify.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Skolem.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Skolem.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Skolem.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Skolem.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/SimplifyFalseTrue.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SimplifyFalseTrue.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SimplifyFalseTrue.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/SimplifyFalseTrue.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/SineUtils.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SineUtils.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SineUtils.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/SineUtils.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/FOOLElimination.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/FOOLElimination.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/FOOLElimination.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/FOOLElimination.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Statistics.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Statistics.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Statistics.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Statistics.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Debug/TimeProfiling.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/TimeProfiling.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Debug/TimeProfiling.cpp",
+  "output": "CMakeFiles/obj.dir/Debug/TimeProfiling.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/SymbolDefinitionInlining.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SymbolDefinitionInlining.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SymbolDefinitionInlining.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/SymbolDefinitionInlining.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/SymbolOccurrenceReplacement.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SymbolOccurrenceReplacement.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SymbolOccurrenceReplacement.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/SymbolOccurrenceReplacement.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/SymCounter.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SymCounter.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SymCounter.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/SymCounter.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/TermAlgebra.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TermAlgebra.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TermAlgebra.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/TermAlgebra.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/TheoryAxioms.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TheoryAxioms.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TheoryAxioms.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/TheoryAxioms.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/TheoryFinder.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TheoryFinder.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TheoryFinder.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/TheoryFinder.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/TheoryFlattening.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TheoryFlattening.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TheoryFlattening.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/TheoryFlattening.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/BlockedClauseElimination.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/BlockedClauseElimination.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/BlockedClauseElimination.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/BlockedClauseElimination.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/Token.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Token.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/Token.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/Token.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/TPTPPrinter.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TPTPPrinter.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TPTPPrinter.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/TPTPPrinter.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/TweeGoalTransformation.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TweeGoalTransformation.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/TweeGoalTransformation.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/TweeGoalTransformation.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/UIHelper.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/UIHelper.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/UIHelper.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/UIHelper.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Shell/SubexpressionIterator.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SubexpressionIterator.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Shell/SubexpressionIterator.cpp",
+  "output": "CMakeFiles/obj.dir/Shell/SubexpressionIterator.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Parse/SMTLIB2.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Parse/SMTLIB2.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Parse/SMTLIB2.cpp",
+  "output": "CMakeFiles/obj.dir/Parse/SMTLIB2.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Parse/TPTP.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Parse/TPTP.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Parse/TPTP.cpp",
+  "output": "CMakeFiles/obj.dir/Parse/TPTP.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/ClauseFlattening.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/ClauseFlattening.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/ClauseFlattening.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/ClauseFlattening.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/FiniteModel.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FiniteModel.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FiniteModel.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/FiniteModel.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/FiniteModelBuilder.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FiniteModelBuilder.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FiniteModelBuilder.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/FiniteModelBuilder.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/FiniteModelMultiSorted.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FiniteModelMultiSorted.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FiniteModelMultiSorted.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/FiniteModelMultiSorted.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/FunctionRelationshipInference.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FunctionRelationshipInference.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/FunctionRelationshipInference.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/FunctionRelationshipInference.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/Monotonicity.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/Monotonicity.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/Monotonicity.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/Monotonicity.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FMB/SortInference.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/SortInference.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FMB/SortInference.cpp",
+  "output": "CMakeFiles/obj.dir/FMB/SortInference.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/Z3MainLoop.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/Z3MainLoop.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/Z3MainLoop.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/Z3MainLoop.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Minisat/core/Solver.cc.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/core/Solver.cc",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/core/Solver.cc",
+  "output": "CMakeFiles/obj.dir/Minisat/core/Solver.cc.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Minisat/simp/SimpSolver.cc.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/simp/SimpSolver.cc",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/simp/SimpSolver.cc",
+  "output": "CMakeFiles/obj.dir/Minisat/simp/SimpSolver.cc.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Minisat/utils/Options.cc.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/utils/Options.cc",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/utils/Options.cc",
+  "output": "CMakeFiles/obj.dir/Minisat/utils/Options.cc.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Minisat/utils/System.cc.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/utils/System.cc",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Minisat/utils/System.cc",
+  "output": "CMakeFiles/obj.dir/Minisat/utils/System.cc.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/MinisatInterfacing.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/MinisatInterfacing.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/MinisatInterfacing.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/MinisatInterfacing.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SAT/MinisatInterfacingNewSimp.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/MinisatInterfacingNewSimp.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SAT/MinisatInterfacingNewSimp.cpp",
+  "output": "CMakeFiles/obj.dir/SAT/MinisatInterfacingNewSimp.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/CASC/PortfolioMode.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/CASC/PortfolioMode.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/CASC/PortfolioMode.cpp",
+  "output": "CMakeFiles/obj.dir/CASC/PortfolioMode.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/CASC/Schedules.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/CASC/Schedules.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/CASC/Schedules.cpp",
+  "output": "CMakeFiles/obj.dir/CASC/Schedules.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SATSubsumption/SATSubsumptionAndResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/SATSubsumptionAndResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/SATSubsumptionAndResolution.cpp",
+  "output": "CMakeFiles/obj.dir/SATSubsumption/SATSubsumptionAndResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SATSubsumption/subsat/constraint.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/constraint.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/constraint.cpp",
+  "output": "CMakeFiles/obj.dir/SATSubsumption/subsat/constraint.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SATSubsumption/subsat/log.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/log.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/log.cpp",
+  "output": "CMakeFiles/obj.dir/SATSubsumption/subsat/log.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SATSubsumption/subsat/subsat.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/subsat.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/subsat.cpp",
+  "output": "CMakeFiles/obj.dir/SATSubsumption/subsat/subsat.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/SATSubsumption/subsat/types.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/types.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/types.cpp",
+  "output": "CMakeFiles/obj.dir/SATSubsumption/subsat/types.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/version.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/version.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/version.cpp",
+  "output": "CMakeFiles/obj.dir/version.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FlutedFragment/FlutedPreprocessor.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FlutedFragment/FlutedPreprocessor.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FlutedFragment/FlutedPreprocessor.cpp",
+  "output": "CMakeFiles/obj.dir/FlutedFragment/FlutedPreprocessor.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/FlutedFragment/Classifier.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FlutedFragment/Classifier.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/FlutedFragment/Classifier.cpp",
+  "output": "CMakeFiles/obj.dir/FlutedFragment/Classifier.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/obj.dir/Inferences/FlutedResolution.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FlutedResolution.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/Inferences/FlutedResolution.cpp",
+  "output": "CMakeFiles/obj.dir/Inferences/FlutedResolution.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/vampire.dir/vampire.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/vampire.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/vampire.cpp",
+  "output": "CMakeFiles/vampire.dir/vampire.cpp.o"
+},
+{
+  "directory": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DCHECK_LEAKS=0 -DNDEBUG -DVDEBUG=0 -DVTIME_PROFILING=0 -DVZ3=0 -I/Users/riccardoelena/Desktop/Università/Tirocinio/vampire -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wall -fno-threadsafe-statics -fno-rtti -o CMakeFiles/subsat.dir/SATSubsumption/subsat/subsat_main.cpp.o -c /Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/subsat_main.cpp",
+  "file": "/Users/riccardoelena/Desktop/Università/Tirocinio/vampire/SATSubsumption/subsat/subsat_main.cpp",
+  "output": "CMakeFiles/subsat.dir/SATSubsumption/subsat/subsat_main.cpp.o"
+}
+]

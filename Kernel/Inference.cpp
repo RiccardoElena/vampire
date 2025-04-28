@@ -622,6 +622,8 @@ std::string Kernel::inputTypeName(UnitInputType type)
 std::string Kernel::ruleName(InferenceRule rule)
 {
   switch (rule) {
+    case InferenceRule::DEF:
+      return "definition fluted fragment";
     case InferenceRule::INPUT:
       return "input";
     case InferenceRule::NEGATED_CONJECTURE:

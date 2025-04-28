@@ -400,6 +400,7 @@ public:
     FLUTED,
     /** this mode check if a given problem is in the Fluted Fragment */
     CLASSIFY,
+    PREPROCESS_FLUTED,
   };
 
   enum class Schedule : unsigned int {

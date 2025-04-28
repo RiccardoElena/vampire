@@ -154,6 +154,8 @@ enum class InferenceRule : unsigned char {
   CLOSURE,
   /** obtained by flattening (quantifiers, junctions) */
   FLATTEN,
+  /** obtained by applying def in fluted fragment */
+  DEF,
   /** obtained by transformation into ENNF */
   ENNF,
   /** obtained by transformation into NNF */

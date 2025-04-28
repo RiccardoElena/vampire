@@ -139,12 +139,14 @@ void Options::init()
                                       "vampire",
                                       "fluted",
                                       "classifier",
+                                      "fluted_preprocess",
                                   });
   _mode.description =
       "Select the mode of operation. Choices are:\n"
       "  -vampire: the standard mode of operation for first-order theorem proving\n"
       "  -fluted: resolve problem in the fluted fragment\n"
       "  -classifier: check if a given problem is in the fluted fragment\n"
+      "  -fluted_preprocess: preprocess the problem with fluted preprocessor\n"
       "  -portfolio: a portfolio mode running a specified schedule (see schedule)\n"
       "  -casc, casc_sat, smtcomp - like portfolio mode, with competition specific\n     presets for schedule, etc.\n"
       "  -preprocess,axiom_selection,clausify: modes for producing output\n      for other solvers.\n"

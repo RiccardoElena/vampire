@@ -14,7 +14,6 @@
  * @since 27/12/2007 Manchester, changed completely to a new implementation
  */
 
-
 #include "Kernel/Clause.hpp"
 #include "Kernel/Formula.hpp"
 #include "Kernel/Inference.hpp"
@@ -29,8 +28,8 @@ using namespace Shell;
  * @since 27/12/2007 Manchester
  */
 CNF::CNF()
-  : _literals(16),
-    _formulas(16)
+    : _literals(16),
+      _formulas(16)
 {
 } // CNF::CNF
 
@@ -39,29 +38,28 @@ CNF::CNF()
  * @pre @b unit must be a formula unit
  * @since 27/12/2007 Manchester
  */
-void CNF::clausify (Unit* unit,Stack<Clause*>& stack)
+void CNF::clausify(Unit *unit, Stack<Clause *> &stack)
 {
-  ASS(! unit->isClause());
+  ASS(!unit->isClause());
 
-  _unit = static_cast<FormulaUnit*>(unit);
+  _unit = static_cast<FormulaUnit *>(unit);
   _result = &stack;
   _literals.reset();
   _formulas.reset();
 
-  Formula* f = _unit->formula();
+  Formula *f = _unit->formula();
   switch (f->connective()) {
-  case TRUE:
-    return;
-  case FALSE:
-    {
-      stack.push(Clause::empty(FormulaTransformation(InferenceRule::CLAUSIFY,unit)));
+    case TRUE: {
+      return;
     }
-    return;
-  default:
-    clausify(f);
+    case FALSE: {
+      stack.push(Clause::empty(FormulaTransformation(InferenceRule::CLAUSIFY, unit)));
+    }
+      return;
+    default:
+      clausify(f);
   }
 } // CNF::clausify()
-
 
 /**
  * Clausify the formula f \/ F1 \/ ... \/ Fn \/ L1 \/ ... \/ Lm,
@@ -83,7 +81,7 @@ void CNF::clausify_rec (Formula* f)
       Clause* clause = new(length) Clause(length,
           FormulaTransformation(InferenceRule::CLAUSIFY,_unit));
       for (int i = length-1;i >= 0;i--) {
-	      (*clause)[i] = _literals[i];
+              (*clause)[i] = _literals[i];
       }
       _result->push(clause);
     }
@@ -99,7 +97,7 @@ void CNF::clausify_rec (Formula* f)
     {
       FormulaList::Iterator fs(f->args());
       while (fs.hasNext()) {
-	      clausify_rec(fs.next());
+              clausify_rec(fs.next());
       }
     }
     return;
@@ -110,7 +108,7 @@ void CNF::clausify_rec (Formula* f)
 
       FormulaList::Iterator fs(f->args());
       while (fs.hasNext()) {
-	      _formulas.push(fs.next());
+              _formulas.push(fs.next());
       }
       clausify_rec(_formulas.pop());
       _formulas.truncate(ln);
@@ -124,12 +122,13 @@ void CNF::clausify_rec (Formula* f)
   default:
     ASSERTION_VIOLATION;
   }
-}*/ // CNF::clausify
+}*/
+// CNF::clausify
 
 /**
  * A recursion-free implementation of the above.
  */
-void CNF::clausify(Formula* f)
+void CNF::clausify(Formula *f)
 {
   enum TodoTag {
     MAIN,     // needs a Formula*
@@ -138,91 +137,87 @@ void CNF::clausify(Formula* f)
     OR_REST,  // needs an int
   };
   union TodoVal {
-    Formula* aFla;
-    FormulaList* aFlist;
+    Formula *aFla;
+    FormulaList *aFlist;
     int anInt;
   };
 
-  Stack<std::pair<TodoTag,TodoVal>> todo;
-  todo.push(std::make_pair<TodoTag,TodoVal>(MAIN,{.aFla = f}));
+  Stack<std::pair<TodoTag, TodoVal>> todo;
+  todo.push(std::make_pair<TodoTag, TodoVal>(MAIN, {.aFla = f}));
 
   do {
     ASS(todo.isNonEmpty());
     auto task = todo.pop();
 
-    switch(task.first) {
+    switch (task.first) {
       case MAIN: {
-        Formula* f = task.second.aFla;
+        Formula *f = task.second.aFla;
 
-        formula_reset:
+      formula_reset:
 
         switch (f->connective()) {
-        case LITERAL:
-          _literals.push(f->literal());
-          if (_formulas.isEmpty()) {
-            // collect the clause
-            _result->push(Clause::fromStack(_literals,
-                FormulaTransformation(InferenceRule::CLAUSIFY,_unit)));
-            _literals.pop();
-          }
-          else {
-            f = _formulas.pop();
-            todo.push(std::make_pair<TodoTag,TodoVal>(LIT_REST,
-              {.aFla = f}));
-            todo.push(std::make_pair<TodoTag,TodoVal>(MAIN,
-              {.aFla = f}));
-          }
-          break;
-
-        case AND:
-          {
-            FormulaList* fl = f->args();
-            if (FormulaList::isNonEmpty(fl)) {
-              todo.push(std::make_pair<TodoTag,TodoVal>(AND_REST,
-                {.aFlist = fl->tail()}));
-              todo.push(std::make_pair<TodoTag,TodoVal>(MAIN,
-                {.aFla = fl->head()}));
+          case LITERAL:
+            _literals.push(f->literal());
+            if (_formulas.isEmpty()) {
+              // collect the clause
+              _result->push(Clause::fromStack(_literals,
+                                              FormulaTransformation(InferenceRule::CLAUSIFY, _unit)));
+              _literals.pop();
             }
-          }
-          break;
+            else {
+              f = _formulas.pop();
+              todo.push(std::make_pair<TodoTag, TodoVal>(LIT_REST,
+                                                         {.aFla = f}));
+              todo.push(std::make_pair<TodoTag, TodoVal>(MAIN,
+                                                         {.aFla = f}));
+            }
+            break;
 
-        case OR:
-          {
+          case AND: {
+            FormulaList *fl = f->args();
+            if (FormulaList::isNonEmpty(fl)) {
+              todo.push(std::make_pair<TodoTag, TodoVal>(AND_REST,
+                                                         {.aFlist = fl->tail()}));
+              todo.push(std::make_pair<TodoTag, TodoVal>(MAIN,
+                                                         {.aFla = fl->head()}));
+            }
+          } break;
+
+          case OR: {
             int ln = _formulas.length();
             FormulaList::Iterator fs(f->args());
             while (fs.hasNext()) {
               _formulas.push(fs.next());
             }
-            todo.push(std::make_pair<TodoTag,TodoVal>(OR_REST,
-              {.anInt = ln}));
-            todo.push(std::make_pair<TodoTag,TodoVal>(MAIN,
-              {.aFla = _formulas.pop()}));
-          }
-          break;
+            todo.push(std::make_pair<TodoTag, TodoVal>(OR_REST,
+                                                       {.anInt = ln}));
+            todo.push(std::make_pair<TodoTag, TodoVal>(MAIN,
+                                                       {.aFla = _formulas.pop()}));
+          } break;
 
-        case FORALL:
-          f = f->qarg();
-          goto formula_reset;
+          case FORALL:
+            f = f->qarg();
+            goto formula_reset;
 
-        default:
-          ASSERTION_VIOLATION;
+          default:
+            ASSERTION_VIOLATION;
         }
 
         break;
       }
       case LIT_REST: {
-        Formula* f = task.second.aFla;
+        Formula *f = task.second.aFla;
         _formulas.push(f);
         _literals.pop();
         break;
       }
       case AND_REST: {
-        FormulaList* fl = task.second.aFlist;
+        FormulaList *fl = task.second.aFlist;
         if (FormulaList::isNonEmpty(fl)) {
-          todo.push(std::make_pair<TodoTag,TodoVal>(AND_REST,
-            {.aFlist = fl->tail()}));
-          todo.push(std::make_pair<TodoTag,TodoVal>(MAIN,
-            {.aFla = fl->head()}));
+          todo.push(std::make_pair<TodoTag, TodoVal>(AND_REST,
+                                                     {.aFlist = fl->tail()}));
+          todo.push(std::make_pair<TodoTag, TodoVal>(MAIN,
+                                                     {.aFla = fl->head()}));
         }
         break;
       }
@@ -232,5 +227,5 @@ void CNF::clausify(Formula* f)
         break;
       }
     }
-  } while(todo.isNonEmpty());
+  } while (todo.isNonEmpty());
 }

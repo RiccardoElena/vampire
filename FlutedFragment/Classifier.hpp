@@ -235,8 +235,11 @@ protected:
     {
       if (!_isValid)
         throw "Invalid FlutedSequence";
-      if (!_var.isSet() || _var.isConst()) {
-        throw "Variable not set or has zero vars";
+      if (!_var.isSet()) {
+        throw "Variable not set ";
+      }
+      if (_var.isConst()) {
+        throw "zero vars";
       }
       return _var;
     }

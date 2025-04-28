@@ -779,6 +779,8 @@ set(VAMPIRE_SOURCES
     ${VAMPIRE_SAT_SUBSUMPTION_SOURCES}
     Forwards.hpp
     "${CMAKE_CURRENT_BINARY_DIR}/version.cpp"
+    FlutedFragment/FlutedPreprocessor.hpp
+    FlutedFragment/FlutedPreprocessor.cpp
     FlutedFragment/Classifier.hpp
     FlutedFragment/Classifier.cpp
     FlutedFragment/Separator.hpp

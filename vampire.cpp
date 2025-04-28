@@ -56,6 +56,7 @@
 #include "Shell/LaTeX.hpp"
 #include "Shell/SineUtils.hpp"
 #include "FlutedFragment/Classifier.hpp"
+#include "FlutedFragment/FlutedPreprocessor.hpp"
 
 #include "Saturation/SaturationAlgorithm.hpp"
 
@@ -97,13 +98,89 @@ bool VerifyFluteness(Problem *problem)
 #endif
 
   FlutedFragment::Classifier classifier(env.options->showFluted());
+
   try {
+    if (problem->units() == nullptr) {
+      if (env.options->showFluted()) {
+        cout << "Problem is empty" << endl;
+      }
+
+      return true;
+    }
     return classifier.isInFlutedFragment(problem->units());
   }
   catch (char const *&e) {
     cout << e << endl;
   }
+
   return false;
+}
+
+void flutedPreprocessMode(Problem *problem)
+{
+  if (env.options->showFluted()) {
+    cout << "Fluted preprocess Mode" << endl;
+  }
+  ScopedPtr<Problem> prb(problem);
+
+  TIME_TRACE(TimeTrace::PREPROCESSING);
+
+  // preprocess without clausification
+  FlutedFragment::FlutedPreprocessor prepro(*env.options);
+
+  prepro.preprocess(*prb);
+  if (env.options->showFluted()) {
+    cout << "Fluted preprocess done" << endl;
+  }
+  // UIHelper::outputSymbolDeclarations(std::cout);
+  UnitList::Iterator units(prb->units());
+
+  while (units.hasNext()) {
+    Unit *u = units.next();
+    cout << TPTPPrinter::toString(u) << "\n";
+    if (!env.options->showFOOL()) {
+      if (u->inference().rule() == InferenceRule::FOOL_AXIOM_TRUE_NEQ_FALSE || u->inference().rule() == InferenceRule::FOOL_AXIOM_ALL_IS_TRUE_OR_FALSE) {
+        continue;
+      }
+    }
+  }
+  if (prb.ptr()) {
+    cout << "The problem is " << (VerifyFluteness(prb.ptr()) ? "" : "not") << " fluted" << endl;
+  }
+  else {
+    if (prb.isEmpty()) {
+      cout << "The problem is empty" << endl;
+    }
+    else {
+      cout << "Wut" << endl;
+    }
+  }
+
+  // we have successfully output all clauses, so we'll terminate with zero return value
+  vampireReturnValue = VAMP_RESULT_STATUS_SUCCESS;
+}
+
+/**
+ * Get Preprocessed Problem and Verify if it's Fluted (in dependence of env.options).
+ */
+[[nodiscard]]
+Problem *preprocessFlutedProblem(Problem *prb)
+{
+#ifdef __linux__
+  unsigned saveInstrLimit = env.options->instructionLimit();
+  if (env.options->parsingDoesNotCount()) {
+    env.options->setInstructionLimit(0);
+  }
+
+  if (env.options->parsingDoesNotCount()) {
+    env.options->setInstructionLimit(saveInstrLimit + Timer::elapsedMegaInstructions());
+  }
+#endif
+
+  TIME_TRACE(TimeTrace::PREPROCESSING);
+  FlutedFragment::FlutedPreprocessor prepro(*env.options);
+  prepro.preprocess(*prb);
+  return prb;
 }
 
 /**
@@ -378,9 +455,10 @@ void flutedMode(Problem *problem)
   env.options->set("updr", "off", false);
   env.options->set("sims", "off", false);
   env.options->set("fd", "off", false);
-  env.options->set("fs", "off", false);
-  env.options->set("fsr", "off", false);
+  // env.options->set("fs", "off", false);
+  // env.options->set("fsr", "off", false);
   env.options->set("av", "off", false);
+  // env.options->set("sac", "on", false);
 
   ScopedPtr<Problem> prb(doProving(problem));
 
@@ -400,8 +478,8 @@ void classifyMode(Problem *problem)
   env.options->set("fd", "off", false);
   env.options->set("fs", "off", false);
   env.options->set("fsr", "off", false);
-
-  cout << "The problem is" << (VerifyFluteness(problem) ? "" : " not ") << "in the Fluted Fragment" << endl;
+  bool isFluted = VerifyFluteness(problem);
+  cout << "The problem is" << (isFluted ? " " : " not ") << "in the Fluted Fragment" << endl;
 
   vampireReturnValue = VAMP_RESULT_STATUS_SUCCESS;
 }
@@ -599,6 +677,7 @@ void axiomSelectionMode(Problem *problem)
 
 void dispatchByMode(Problem *problem)
 {
+
   switch (env.options->mode()) {
     case Options::Mode::CLASSIFY:
       classifyMode(problem);
@@ -718,7 +797,9 @@ void dispatchByMode(Problem *problem)
     case Options::Mode::PREPROCESS2:
       preprocessMode(problem, false);
       break;
-
+    case Options::Mode::PREPROCESS_FLUTED:
+      flutedPreprocessMode(problem);
+      break;
     case Options::Mode::TPREPROCESS:
       preprocessMode(problem, true);
       break;
